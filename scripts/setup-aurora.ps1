@@ -1,33 +1,31 @@
-#!/bin/bash
-# ============================================================================
-# Aurora Homepage Setup Script (Linux/Bash para Codex)
-# ============================================================================
+# scripts/setup-aurora.ps1
+Write-Host "--- Iniciando configuração do ambiente da Aurora Homepage ---" -ForegroundColor Cyan
 
-echo "--- Iniciando configuração do ambiente da Aurora Homepage ---"
+# 1. Ir para a raiz do projeto
+Set-Location -Path "$PSScriptRoot\.."
 
-# 1. Garante que estamos na raiz do projeto
-cd "$(dirname "$0")/.." || exit 1
+# 2. Verificar se Node.js está instalado
+if (-not (Get-Command node -ErrorAction SilentlyContinue)) {
+    Write-Error "ERRO: Node.js não encontrado. Instale o Node.js antes de continuar."
+    exit 1
+}
 
-# 2. Verifica se Node.js está disponível
-if ! command -v node &> /dev/null; then
-  echo "ERRO: Node.js não encontrado. Instale o Node.js antes de continuar."
-  exit 1
-fi
-
-# 3. Instala dependências
-echo "--- Instalando dependências via NPM ---"
+# 3. Instalar dependências
+Write-Host "--- Instalando dependências via NPM ---" -ForegroundColor Cyan
 npm install
 
-# 4. Instala React Router (se necessário)
-if [ ! -d "node_modules/react-router-dom" ]; then
-  echo "--- Instalando React Router ---"
-  npm install react-router-dom @types/react-router-dom
-fi
+# 4. Verificar instalação do React Router DOM
+if (-not (Test-Path "node_modules/react-router-dom")) {
+    Write-Host "--- Instalando React Router ---" -ForegroundColor Cyan
+    npm install react-router-dom @types/react-router-dom
+}
 
-# 5. Adiciona type=module no package.json se não estiver presente
-if ! grep -q '"type": "module"' package.json; then
-  sed -i 's/"version": "\(.*\)"/"version": "\1",\n  "type": "module"/' package.json
-  echo "✔ Campo \"type\": \"module\" adicionado ao package.json"
-fi
+# 5. Adicionar "type": "module" ao package.json, se necessário
+$packageJson = Get-Content -Raw -Path "package.json" | ConvertFrom-Json
+if (-not $packageJson.PSObject.Properties.Name.Contains("type")) {
+    $packageJson | Add-Member -NotePropertyName "type" -NotePropertyValue "module"
+    $packageJson | ConvertTo-Json -Depth 10 | Set-Content -Path "package.json"
+    Write-Host '✓ Campo "type": "module" adicionado ao package.json'
+}
 
-echo "--- Setup concluído com sucesso! ---"
+Write-Host "--- Setup concluído com sucesso! ---" -ForegroundColor Green
