@@ -1,13 +1,13 @@
-import Hero from "./components/Hero";
-import AboutAI from "./components/AboutAI";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import Manifesto from './pages/Manifesto';
 
-function App() {
+export default function App() {
   return (
-    <main className="bg-black text-white font-sans">
-      <Hero />
-      <AboutAI />
-    </main>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/manifesto" element={<Manifesto />} />
+    </Routes>
   );
 }
-
-export default App;
