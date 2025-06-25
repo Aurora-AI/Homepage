@@ -15,3 +15,4 @@ yarn-error.log*
 *.ps1
 *.sh
 .env
+node_modules/
