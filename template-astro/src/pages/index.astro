@@ -1,18 +1,19 @@
 ---
-// Caminho completo: template-astro/src/pages/index.astro
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import FeatureCard from '../components/FeatureCard.astro';
 ---
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Aurora Website</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/favicon.svg" />
-    <link rel="stylesheet" href="/src/styles/tailwind.css" />
-  </head>
-  <body class="bg-white text-gray-900">
-    <main class="p-8 text-center">
-      <h1 class="text-4xl font-bold">🌌 Bem-vindo ao Aurora Website</h1>
-      <p class="mt-4 text-lg">Interface em construção com Astro + Tailwind</p>
-    </main>
-  </body>
-</html>
+<BaseLayout>
+  <HeroSection />
+  <section class="py-16 px-4 grid sm:grid-cols-3 gap-6 max-w-6xl mx-auto">
+    <FeatureCard title="Arquitetura Híbrida">
+      Combinação inteligente de modelos on-device e na nuvem, orquestrados pelo aurora-router.
+    </FeatureCard>
+    <FeatureCard title="Fábrica de IA">
+      Desenvolvimento contínuo onde Aurora delega tarefas para agentes especialistas.
+    </FeatureCard>
+    <FeatureCard title="Memória Ativa">
+      Base de conhecimento que aprende de forma automatizada e constante.
+    </FeatureCard>
+  </section>
+</BaseLayout>
