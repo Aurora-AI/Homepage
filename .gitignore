@@ -16,3 +16,4 @@ yarn-error.log*
 *.sh
 .env
 node_modules/
+node_modules
