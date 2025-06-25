@@ -1,13 +1,26 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Manifesto from './pages/Manifesto';
+// src/App.tsx
+import React, { useState, useEffect } from 'react';
+import Home from './pages/Home'; // Path seems to be 'src/pages/Home.tsx'
+import SplashScreen from './components/SplashScreen'; // New path
+
+// Duration for the splash screen (e.g., 5 seconds)
+const SPLASH_DURATION = 5000; // 5 seconds
 
 export default function App() {
-  return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/manifesto" element={<Manifesto />} />
-    </Routes>
-  );
+  const [showSplash, setShowSplash] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowSplash(false);
+    }, SPLASH_DURATION);
+
+    // Cleanup timer on component unmount
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (showSplash) {
+    return <SplashScreen />;
+  }
+
+  return <Home />;
 }
