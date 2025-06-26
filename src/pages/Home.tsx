@@ -7,15 +7,19 @@ import ROI from '../components/sections/ROI';
 import SobreNos from '../components/sections/SobreNos';
 import Investidores from '../components/sections/Investidores';
 import { VisionSection } from '../components/sections/VisionSection';
-import { TechnologySection } from '../components/sections/TechnologySection'; // <- IMPORTE AQUI
+import { TechnologySection } from '../components/sections/TechnologySection';
+import { LanguageSelector } from '../components/LanguageSelector';
+import IntroText from '../components/IntroText'; // Import IntroText
 
 export default function Home() {
   return (
-    <main>
+    <main style={{ position: 'relative', minHeight: '100vh' }}>
+      <IntroText /> {/* Render IntroText here */}
+      <LanguageSelector />
       <Hero />
       <AboutAI />
       <VisionSection />
-      <TechnologySection /> {/* <- ADICIONE AQUI */}
+      <TechnologySection />
       <ROI />
       <SobreNos />
       <Investidores />
