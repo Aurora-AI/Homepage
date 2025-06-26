@@ -18,11 +18,13 @@ fi
 echo "--- Instalando dependências via NPM ---"
 npm install
 
-# 4. Instala React Router (se necessário)
-if [ ! -d "node_modules/react-router-dom" ]; then
-  echo "--- Instalando React Router ---"
-  npm install react-router-dom @types/react-router-dom
-fi
+# React Router DOM não está sendo usado no projeto Astro atual.
+# Removendo a instalação automática para simplificar.
+# # 4. Instala React Router (se necessário)
+# if [ ! -d "node_modules/react-router-dom" ]; then
+#   echo "--- Instalando React Router ---"
+#   npm install react-router-dom @types/react-router-dom
+# fi
 
 # 5. Adiciona "type": "module" ao package.json se ainda não existir
 if ! grep -q '"type": "module"' package.json; then

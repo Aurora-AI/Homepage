@@ -8,14 +8,14 @@ import SobreNos from '../components/sections/SobreNos';
 import Investidores from '../components/sections/Investidores';
 import { VisionSection } from '../components/sections/VisionSection';
 import { TechnologySection } from '../components/sections/TechnologySection';
-import { LanguageSelector } from '../components/LanguageSelector';
+// import { LanguageSelector } from '../components/LanguageSelector'; // Removido daqui
 import IntroText from '../components/IntroText'; // Import IntroText
 
 export default function Home() {
   return (
     <main style={{ position: 'relative', minHeight: '100vh' }}>
       <IntroText /> {/* Render IntroText here */}
-      <LanguageSelector />
+      {/* <LanguageSelector /> Removido daqui, pois já está no Hero */}
       <Hero />
       <AboutAI />
       <VisionSection />

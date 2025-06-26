@@ -1,10 +1,8 @@
 ---
 // src/pages/manifesto.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ManifestoContent from '../pages/Manifesto.tsx';
 ---
 <BaseLayout title="Aurora - Manifesto">
-  <main>
-    <h1>Nosso Manifesto</h1>
-    <p>Conteúdo da página do manifesto aqui...</p>
-    </main>
+  <ManifestoContent client:visible />
 </BaseLayout>
