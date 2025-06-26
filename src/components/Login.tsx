@@ -10,7 +10,8 @@ export default function Login() {
     setError(null);
     try {
       await login(email, password);
-      // Redirecionamento será tratado pelo Astro ou por um mecanismo de navegação global
+      // Login bem-sucedido, redirecionar para a home
+      window.location.href = '/';
     } catch (err: any) {
       setError(err.message || 'An unknown error occurred');
     }

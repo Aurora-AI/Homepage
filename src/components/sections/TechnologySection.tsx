@@ -39,6 +39,11 @@ export const TechnologySection: React.FC = () => {
               <div key={feature.name} className="relative pl-16">
                 <dt className="text-base font-semibold leading-7 text-gray-900">
                   <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    {/* ÍCONE PLACEHOLDER: Substituir por um SVG que represente melhor "{feature.name}".
+                        Sugestões de bibliotecas: Heroicons (heroicons.com), Feather Icons (feathericons.com).
+                        Para "Modelos VLA": ícone de olho, imagem com texto, ou similar.
+                        Para "Arquitetura Híbrida": ícone de nuvem com dispositivo, ou setas de sincronização.
+                        Para "Aprendizado e Influência": ícone de gráfico crescendo, cérebro com setas, ou similar. */}
                     <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l-3.75 3.75m3.75-3.75L0 17.25m3.75-3.75h16.5m-16.5 0l3.75 3.75m-3.75-3.75l3.75-3.75M21 13.5l-3.75-3.75m3.75 3.75L17.25 10m3.75 3.75H3.75" />
                     </svg>

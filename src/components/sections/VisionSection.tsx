@@ -22,7 +22,8 @@ export const VisionSection: React.FC = () => {
             <div className="relative pl-16">
               <dt className="text-base font-semibold leading-7 text-gray-900">
                 <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  {/* Ícone placeholder */}
+                  {/* ÍCONE PLACEHOLDER: Substituir por um SVG que represente melhor "Ecossistemas de Negócios Inteligentes".
+                      Sugestões de bibliotecas: Heroicons (heroicons.com), Feather Icons (feathericons.com). Ex: Ícone de globo, rede ou cérebro. */}
                   <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582" />
                   </svg>
@@ -38,7 +39,8 @@ export const VisionSection: React.FC = () => {
             <div className="relative pl-16">
               <dt className="text-base font-semibold leading-7 text-gray-900">
                 <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
-                  {/* Ícone placeholder */}
+                  {/* ÍCONE PLACEHOLDER: Substituir por um SVG que represente melhor "A Fábrica Aurora".
+                      Sugestões de bibliotecas: Heroicons (heroicons.com), Feather Icons (feathericons.com). Ex: Ícone de engrenagens, ferramentas ou fluxo. */}
                    <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9" />
                   </svg>

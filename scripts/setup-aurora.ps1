@@ -14,11 +14,13 @@ if (-not (Get-Command node -ErrorAction SilentlyContinue)) {
 Write-Host "--- Instalando dependências via NPM ---" -ForegroundColor Cyan
 npm install
 
-# 4. Verificar instalação do React Router DOM
-if (-not (Test-Path "node_modules/react-router-dom")) {
-    Write-Host "--- Instalando React Router ---" -ForegroundColor Cyan
-    npm install react-router-dom @types/react-router-dom
-}
+# React Router DOM não está sendo usado no projeto Astro atual.
+# Removendo a instalação automática para simplificar.
+# # 4. Verificar instalação do React Router DOM
+# if (-not (Test-Path "node_modules/react-router-dom")) {
+#     Write-Host "--- Instalando React Router ---" -ForegroundColor Cyan
+#     npm install react-router-dom @types/react-router-dom
+# }
 
 # 5. Adicionar "type": "module" ao package.json, se necessário
 $packageJson = Get-Content -Raw -Path "package.json" | ConvertFrom-Json
