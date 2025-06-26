@@ -1,20 +1,22 @@
-# Node
+# Node.js
 node_modules/
 dist/
 .vite/
+package-lock.json
+
+# Logs
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Editor
-.vscode/
-.DS_Store
+# Ambiente
+.env
 
-# Sistema
+# Scripts do sistema
 *.ps1
 *.sh
-.env
-node_modules/
-node_modules
-node_modules
+
+# Configurações de editor
+.vscode/
+.DS_Store
