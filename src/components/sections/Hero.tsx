@@ -14,7 +14,7 @@ export default function Hero() {
 
       {/* Language Selector no canto superior direito */}
       <div className="absolute top-6 right-6 z-20">
-        <LanguageSelector />
+        {/* <LanguageSelector /> */}
       </div>
 
       <h1 className="relative z-10 text-4xl md:text-6xl font-light text-center px-6">
