@@ -1,26 +1,20 @@
-// src/components/sections/Hero.tsx
+---
+import { LanguageSelector } from './LanguageSelector.tsx';
+---
 
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { LanguageSelector } from '../LanguageSelector';
-
-export default function Hero() {
-  const { t } = useTranslation();
-
-  return (
-    <section 
-      className="relative h-screen flex items-center justify-center text-white bg-cover bg-center bg-[url('/aurora-fundo.png')]"
-    >
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-md" />
-
-      {/* Language Selector no canto superior direito */}
-      <div className="absolute top-6 right-6 z-20">
-        <LanguageSelector />
-      </div>
-
-      <h1 className="relative z-10 text-4xl md:text-6xl font-light text-center px-6">
-        {t('greeting')}
-      </h1>
-    </section>
-  );
-}
+<header class="absolute top-0 left-0 right-0 z-20 flex justify-between items-center p-6">
+  <div class="flex items-center">
+    <a href="/">
+      <img src="/assets/imagens/logo.png" alt="Aurora Logo" class="h-10 w-auto">
+    </a>
+  </div>
+  <nav class="hidden md:flex items-center space-x-6">
+    <a href="/sobre" class="text-white hover:text-gray-300 transition-colors">Sobre Nós</a>
+    <a href="/tecnologia" class="text-white hover:text-gray-300 transition-colors">Tecnologia</a>
+    <a href="/manifesto" class="text-white hover:text-gray-300 transition-colors">Manifesto</a>
+  </nav>
+  <div class="flex items-center">
+    <LanguageSelector />
+    <a href="/login" class="ml-4 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors">Login</a>
+  </div>
+</header>
