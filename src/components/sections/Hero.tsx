@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import LanguageSelector from '../LanguageSelector';
+import { LanguageSelector } from '../LanguageSelector';
 export default function Hero() {
   const { t } = useTranslation();
 
