@@ -1,0 +1,1 @@
+feat: Rename image and page files for Vercel compatibility
