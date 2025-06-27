@@ -1,7 +1,7 @@
 // src/App.tsx
 import React, { useState, useEffect, Suspense } from 'react';
 import VideoBackground from './components/VideoBackground';
-import Home from './pages/Home'; // Import Home component
+import Home from './pages/_Home'; // Import Home component
 import { initializeI18n } from './i18n';
 
 // Chamar a inicialização do i18next. Isso retorna uma promessa.
