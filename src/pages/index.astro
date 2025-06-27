@@ -1,8 +1,9 @@
 ---
 // src/pages/index.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
-import App from '../App.tsx'; // O componente principal com a lógica do vídeo
 ---
-<BaseLayout title="Aurora Platform">
-    <App client:load />
+
+<BaseLayout title="Aurora CRM">
+  <div id="root"></div>
+  <script type="module" src="../main.tsx"></script>
 </BaseLayout>
