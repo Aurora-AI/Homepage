@@ -6,6 +6,7 @@ interface VideoBackgroundProps {
 
 export default function VideoBackground({ onVideoEnd }: VideoBackgroundProps) {
   const handleVideoEnd = () => {
+    console.log('VideoBackground.tsx: Video ended, calling onVideoEnd');
     onVideoEnd();
   };
 
@@ -18,6 +19,8 @@ export default function VideoBackground({ onVideoEnd }: VideoBackgroundProps) {
         playsInline
         className="absolute inset-0 w-full h-full object-cover z-0"
         onEnded={handleVideoEnd} // Call onVideoEnd when video finishes
+        onPlay={() => console.log('VideoBackground.tsx: Video started playing')}
+        onError={(e) => console.error('VideoBackground.tsx: Video error', e)}
       />
       <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-10" />
     </section>

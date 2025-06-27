@@ -27,27 +27,23 @@ export default function App() {
   }, []);
 
   const handleVideoEnd = () => {
-    console.log('Video ended, setting showVideo to false');
+    console.log('App.tsx: Video ended, setting showVideo to false');
     setShowVideo(false);
   };
 
   if (!i18nInitialized) {
-    // Você pode mostrar um loader global aqui se preferir
-    // Este console.log é para depuração, não deve aparecer na produção final.
-    console.log('Waiting for i18next to initialize...');
-    // Renderiza um loader simples enquanto o i18n não está pronto.
-    // Idealmente, este loader seria estilizado ou viria de um componente.
+    console.log('App.tsx: Waiting for i18next to initialize...');
     return <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', color: 'white' }}>Carregando...</div>;
   }
 
-  // Suspense ainda pode ser útil se componentes filhos carregarem namespaces de forma preguiçosa
-  // ou tiverem outras operações assíncronas relacionadas a i18n.
+  console.log(`App.tsx: showVideo is ${showVideo ? 'true' : 'false'}`);
+
   return (
     <Suspense fallback={<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', color: 'white' }}>Carregando conteúdo...</div>}>
       {showVideo ? (
         <VideoBackground onVideoEnd={handleVideoEnd} />
       ) : (
-        <Home /> // Render Home component after video
+        <Home />
       )}
     </Suspense>
   );
