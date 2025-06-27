@@ -32,7 +32,7 @@ const SplashScreen = ({ onVideoEnd }: SplashScreenProps) => {
         onEnded={handleVideoEnd} // Chama nossa função quando o vídeo acaba
         className="w-full h-full object-cover"
       >
-        <source src="/Video_script_8_202506251739.mp4" type="video/mp4" />
+        <source src="/assets/videos/Video_script_8_202506251739.mp4" type="video/mp4" />
         Seu navegador não suporta o vídeo de abertura.
       </video>
       
