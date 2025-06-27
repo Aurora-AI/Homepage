@@ -1,15 +1,26 @@
----
-// src/components/Header.astro
----
-<header class="bg-black/80 text-white shadow-md fixed top-0 w-full z-50 backdrop-blur-md">
-  <nav class="max-w-6xl mx-auto flex items-center justify-between p-4">
-    <a href="/" class="text-xl font-semibold text-cyan-400 hover:text-cyan-300 transition-colors">
-      Aurora
-    </a>
-    <ul class="flex space-x-6 text-sm font-medium">
-      <li><a class="hover:text-cyan-300 transition-colors" href="/">Home</a></li>
-      <li><a class="hover:text-cyan-300 transition-colors" href="/manifesto">Manifesto</a></li>
-      <li><a class="hover:text-cyan-300 transition-colors" href="/login">Login</a></li>
-    </ul>
-  </nav>
-</header>
+// src/components/sections/Hero.tsx
+
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import { LanguageSelector } from '../LanguageSelector';
+
+export default function Hero() {
+  const { t } = useTranslation();
+
+  return (
+    <section 
+      className="relative h-screen flex items-center justify-center text-white bg-cover bg-center bg-[url('/aurora-fundo.png')]"
+    >
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-md" />
+
+      {/* Language Selector no canto superior direito */}
+      <div className="absolute top-6 right-6 z-20">
+        <LanguageSelector />
+      </div>
+
+      <h1 className="relative z-10 text-4xl md:text-6xl font-light text-center px-6">
+        {t('greeting')}
+      </h1>
+    </section>
+  );
+}

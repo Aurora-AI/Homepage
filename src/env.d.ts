@@ -1,8 +1,10 @@
-/// <reference path="../.astro/types.d.ts" />
+// src/env.d.ts
+
+/// <reference types="astro/client" />
 
 interface ImportMetaEnv {
   readonly VITE_API_BASE_URL: string;
-  // Adicione outras variáveis de ambiente aqui se forem usadas no código
+  // Adicione outras variáveis de ambiente que você usar no futuro aqui
 }
 
 interface ImportMeta {
