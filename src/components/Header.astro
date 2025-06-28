@@ -9,12 +9,30 @@ import { LanguageSelector } from './LanguageSelector.tsx';
     </a>
   </div>
   <nav class="hidden md:flex items-center space-x-6">
-    <a href="/sobre" class="text-white hover:text-gray-300 transition-colors">Sobre Nós</a>
+    <a href="/" class="text-white hover:text-gray-300 transition-colors">Home</a>
+    <a href="/sobre" class="text-white hover:text-gray-300 transition-colors">Sobre</a>
     <a href="/tecnologia" class="text-white hover:text-gray-300 transition-colors">Tecnologia</a>
-    <a href="/manifesto" class="text-white hover:text-gray-300 transition-colors">Manifesto</a>
   </nav>
-  <div class="flex items-center">
-    {/* <LanguageSelector /> */}
-    <a href="/login" class="ml-4 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-md transition-colors">Login</a>
+  <div class="md:hidden">
+    <button id="menu-button" class="text-white focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
   </div>
+
+  <nav id="mobile-menu" class="hidden md:hidden absolute top-full left-0 right-0 bg-gray-800 bg-opacity-90 flex flex-col items-center space-y-4 py-4">
+    <a href="/" class="text-white hover:text-gray-300 transition-colors">Home</a>
+    <a href="/sobre" class="text-white hover:text-gray-300 transition-colors">Sobre</a>
+    <a href="/tecnologia" class="text-white hover:text-gray-300 transition-colors">Tecnologia</a>
+  </nav>
+
+<script is:inline>
+  const menuButton = document.getElementById('menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script>
 </header>

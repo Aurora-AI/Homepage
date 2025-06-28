@@ -1,14 +1,13 @@
-// src/pages/Home.tsx - Adicionando a Seção de Tecnologia
-
 import React from 'react';
-import HeroSection from '../components/sections/HeroSection';
-import FeaturesSection from '../components/sections/FeaturesSection';
 
 export default function Home() {
   return (
-    <main>
-      <HeroSection />
-      <FeaturesSection />
+    <main className="relative w-full h-screen overflow-hidden flex items-center justify-center">
+      <img 
+        src="/assets/imagens/Puzzel_Aurora.png" 
+        alt="Aurora Puzzle Banner" 
+        className="w-full h-full object-cover"
+      />
     </main>
   );
 }
