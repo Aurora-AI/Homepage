@@ -7,6 +7,15 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'night-blue': '#0A0B1A',
+        'aurora-accent': '#00FFFF',
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+        poppins: ['Poppins', 'sans-serif'],
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
@@ -30,8 +39,8 @@ module.exports = {
           '100%': { transform: 'scale(1)' },
         },
         'pulse-neon': {
-          '0%, 100%': { opacity: '1', boxShadow: '0 0 5px rgba(147, 51, 234, 0.5), 0 0 15px rgba(147, 51, 234, 0.3)' },
-          '50%': { opacity: '0.8', boxShadow: '0 0 10px rgba(147, 51, 234, 0.8), 0 0 30px rgba(147, 51, 234, 0.6)' },
+          '0%, 100%': { opacity: '1', boxShadow: '0 0 5px rgba(0, 255, 255, 0.5), 0 0 15px rgba(0, 255, 255, 0.3)' },
+          '50%': { opacity: '0.8', boxShadow: '0 0 10px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6)' },
         },
         'dot-pulse': {
           '0%, 100%': { transform: 'scale(1)', opacity: '1' },

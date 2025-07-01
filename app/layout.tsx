@@ -1,10 +1,10 @@
+import React from 'react';
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
-const inter = Inter({ subsets: ["latin"] });
+import GlobalFeedbackProvider from '@/components/GlobalFeedbackProvider';
+import { LoadingErrorProvider } from '@/context/LoadingErrorContext';
 
 export const metadata: Metadata = {
   title: "Aurora",
@@ -18,10 +18,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black`}>
-        <Header />
-        {children}
-        <Footer />
+      <body>
+        <LoadingErrorProvider>
+          <GlobalFeedbackProvider>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+          </GlobalFeedbackProvider>
+        </LoadingErrorProvider>
       </body>
     </html>
   );
