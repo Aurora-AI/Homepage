@@ -1,19 +1,21 @@
 import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-import { fileURLToPath } from 'url';
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    react(),
-    tailwind()
-  ],
+  // Define o diretório público para assets estáticos
+  publicDir: './public',
+  // Modo de saída estático para o deploy
+  output: 'static',
+  integrations: [react(), tailwind({
+    // Permite que o Tailwind escaneie arquivos Astro e React
+    applyBaseStyles: true // Aplica os estilos base do Tailwind
+  })],
   vite: {
-    resolve: {
-      alias: {
-        '@': fileURLToPath(new URL('./src', import.meta.url))
-      }
+    // Configurações do Vite, se necessário (ex: para alias de importação)
+    ssr: {
+      noExternal: ['framer-motion'] // Necessário para a framer-motion funcionar no SSR
     }
   }
 });

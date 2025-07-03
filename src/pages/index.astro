@@ -1,9 +1,29 @@
 ---
-import MainLayout from '@/layouts/MainLayout.astro';
-import HeroSection from '@/components/HeroSection.tsx';
+// src/pages/index.astro
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.tsx';
+import Hero from '../components/Hero.tsx';
+import Tese from '../components/Tese.tsx';
+import Arquitetura from '../components/Arquitetura.tsx';
+import Metodologia from '../components/Metodologia.tsx';
+import Produto from '../components/Produto.tsx';
+import Roteiro from '../components/Roteiro.tsx';
+import Status from '../components/Status.tsx';
 ---
-<MainLayout title="Aurora | A Fábrica de IA">
-  <main>
-    <HeroSection client:load />
-  </main>
-</MainLayout>
+
+<Layout title="Aurora | Construindo o Próximo Paradigma de Software">
+  <Header client:load />
+	<main class="flex flex-col items-center w-full">
+		<Hero client:load />
+    
+    {/* Container para os blocos de conteúdo com espaçamento via gap */}
+		<div class="w-full max-w-4xl px-4 py-16 flex flex-col gap-24">
+			<Tese client:visible />
+			<Arquitetura client:visible />
+      <Metodologia client:visible />
+      <Produto client:visible />
+      <Roteiro client:visible />
+      <Status client:visible />
+		</div>
+	</main>
+</Layout>
