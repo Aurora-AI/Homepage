@@ -13,6 +13,7 @@ const Header = () => {
     { name: "Produto", href: "#produto" },
     { name: "Soberania Cognitiva", href: "#soberania-cognitiva" },
     { name: "Roteiro", href: "#roteiro" },
+    { name: "Status", href: "#status" },
   ];
 
   return (
