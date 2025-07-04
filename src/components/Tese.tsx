@@ -23,7 +23,7 @@ const Tese = () => {
             <Heading as="h2">
               O Paradigma "Intelligence-First"
             </Heading>
-            <p className="mt-4 text-aurora-text-secondary text-lg">
+            <p className="mt-4 text-slate-300 text-lg">
               O software tradicional reage. A Aurora antecipa. Nossa filosofia inverte o roteiro do desenvolvimento: antes de escrever uma única linha de código, usamos IA para mapear o DNA do problema. Nosso primeiro produto é sempre uma Máquina de Geração de Insights, garantindo que cada solução que construímos atenda a uma necessidade profunda e validada do seu negócio.
             </p>
           </div>

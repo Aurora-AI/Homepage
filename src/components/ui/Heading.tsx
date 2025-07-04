@@ -1,25 +1,16 @@
-// src/components/ui/Heading.tsx
 import React from 'react';
 
-type HeadingProps = {
-  as?: 'h1' | 'h2' | 'h3' | 'h4';
+interface HeadingProps {
+  as?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
   children: React.ReactNode;
   className?: string;
-};
+}
 
 const Heading = ({ as: Component = 'h2', children, className = '' }: HeadingProps) => {
-  const sizeClasses = {
-    h1: 'text-4xl md:text-5xl font-bold tracking-tight',
-    h2: 'text-3xl md:text-4xl font-bold',
-    h3: 'text-2xl font-semibold',
-    h4: 'text-xl font-semibold',
-  };
-
-  const baseStyles = "text-aurora-text-primary";
-  const componentClasses = `${baseStyles} ${sizeClasses[Component]} ${className}`;
-
+  const baseClasses = 'text-2xl font-bold text-white sm:text-3xl';
+  
   return (
-    <Component className={componentClasses}>
+    <Component className={`${baseClasses} ${className}`}>
       {children}
     </Component>
   );
