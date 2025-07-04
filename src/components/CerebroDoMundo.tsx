@@ -14,8 +14,7 @@ const CerebroDoMundo = () => {
       transition={{ duration: 0.7 }}
     >
       <div 
-        className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url('https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/20.webp')" }}
+        className="absolute inset-0 bg-cover bg-center bg-[url('https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/20.webp')]"
       >
         <div className="absolute inset-0 bg-aurora-bg/80"></div>
       </div>
