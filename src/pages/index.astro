@@ -5,11 +5,11 @@ import Header from '../components/Header.tsx';
 import Hero from '../components/Hero.tsx';
 import Tese from '../components/Tese.tsx';
 import Arquitetura from '../components/Arquitetura.tsx';
-import AIOSVision from '../components/AIOSVision.tsx'; // Novo
-import Tecnologia from '../components/Tecnologia.tsx'; // Novo
-import VantagemCompetitiva from '../components/VantagemCompetitiva.tsx'; // Novo
-import SoberaniaCognitiva from '../components/SoberaniaCognitiva.tsx'; // Novo
-import CerebroDoMundo from '../components/CerebroDoMundo.tsx'; // Novo e em destaque
+import Tecnologia from '../components/Tecnologia.tsx';
+import VantagemCompetitiva from '../components/VantagemCompetitiva.tsx';
+import AIOSVision from '../components/AIOSVision.tsx';
+import CerebroDoMundo from '../components/CerebroDoMundo.tsx';
+import SoberaniaCognitiva from '../components/SoberaniaCognitiva.tsx';
 import Footer from '../components/Footer.tsx';
 ---
 
@@ -22,13 +22,10 @@ import Footer from '../components/Footer.tsx';
       <div class="w-full max-w-7xl py-16 flex flex-col gap-16 md:gap-24">
         <Tese client:visible />
         <Arquitetura client:visible />
-        
-        {/* Seção de Destaque */}
-        <CerebroDoMundo client:visible />
-
-        <AIOSVision client:visible />
         <Tecnologia client:visible />
         <VantagemCompetitiva client:visible />
+        <AIOSVision client:visible />
+        <CerebroDoMundo client:visible />
         <SoberaniaCognitiva client:visible />
       </div>
     </div>
