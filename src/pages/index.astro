@@ -5,10 +5,11 @@ import Header from '../components/Header.tsx';
 import Hero from '../components/Hero.tsx';
 import Tese from '../components/Tese.tsx';
 import Arquitetura from '../components/Arquitetura.tsx';
-import Metodologia from '../components/Metodologia.tsx';
-import Produto from '../components/Produto.tsx';
-import Roteiro from '../components/Roteiro.tsx';
-import Status from '../components/Status.tsx';
+import AIOSVision from '../components/AIOSVision.tsx'; // Novo
+import Tecnologia from '../components/Tecnologia.tsx'; // Novo
+import VantagemCompetitiva from '../components/VantagemCompetitiva.tsx'; // Novo
+import SoberaniaCognitiva from '../components/SoberaniaCognitiva.tsx'; // Novo
+import CerebroDoMundo from '../components/CerebroDoMundo.tsx'; // Novo e em destaque
 import Footer from '../components/Footer.tsx';
 ---
 
@@ -18,14 +19,17 @@ import Footer from '../components/Footer.tsx';
     <Hero client:load />
     
     <div class="flex flex-col items-center w-full px-4">
-      {/* Container mais largo para o conteúdo principal */}
       <div class="w-full max-w-7xl py-16 flex flex-col gap-16 md:gap-24">
         <Tese client:visible />
         <Arquitetura client:visible />
-        <Metodologia client:visible />
-        <Produto client:visible />
-        <Roteiro client:visible />
-        <Status client:visible />
+        
+        {/* Seção de Destaque */}
+        <CerebroDoMundo client:visible />
+
+        <AIOSVision client:visible />
+        <Tecnologia client:visible />
+        <VantagemCompetitiva client:visible />
+        <SoberaniaCognitiva client:visible />
       </div>
     </div>
   </main>

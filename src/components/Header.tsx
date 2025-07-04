@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 
 const Header = () => {
   const navItems = [
+    { name: "Paradigma", href: "#hero-content" },
     { name: "Tese", href: "#tese" },
-    { name: "Tecnologia", href: "#arquitetura" },
-    { name: "Vantagem Competitiva", href: "#metodologia" },
-    { name: "Produto", href: "#produto" },
-    { name: "Soberania Cognitiva", href: "#roteiro" },
+    { name: "Tecnologia", href: "#tecnologia" },
+    { name: "Visão AIOS", href: "#aios-vision" }, // Link adicionado
+    { name: "Cérebro do Mundo", href: "#cerebro-do-mundo" },
   ];
 
   return (
@@ -25,9 +25,7 @@ const Header = () => {
               Aurora
             </a>
           </div>
-
-          <div>
-            {/* CORREÇÃO: Removido 'hidden' e 'md:block' para o menu ser sempre visível */}
+          <div className="hidden md:block">
             <nav aria-label="Global">
               <ul className="flex items-center gap-6 text-sm">
                 {navItems.map((item) => (

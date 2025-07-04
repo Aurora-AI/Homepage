@@ -1,39 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* src/styles/global.css */
 
-/* Importa as fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700&display=swap');
-
-/* Estilos de fundo principal da página */
-body {
-  background-image: url('/images/aurora-puzzle-background.jpg');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; /* Fixa o fundo enquanto o conteúdo rola */
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Evita scroll horizontal */
-}
-
-/* Estilo para rolagem suave (smooth scroll) */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Base text color for the entire body */
-body {
-  color: theme('colors.aurora-text-light'); /* Default text color for the overall page, assuming dark background */
-  font-family: theme('fontFamily.inter');
-}
-
-/* Basic styling for headings consistent with Sora font */
-h1, h2, h3, h4, h5, h6 {
-  font-family: theme('fontFamily.sora');
-  @apply text-aurora-text-light; /* Default heading color */
-}
-
-/* Additional utility for headings on light sections */
-.section-light h1, .section-light h2, .section-light h3, .section-light h4, .section-light h5, .section-light h6 {
-  @apply text-aurora-text-dark;
+.hero-background {
+  background-image: url('/Puzzel_Aurora.png');
+  background-size: contain;
+  background-position: center left;
+  background-repeat: no-repeat;
 }
