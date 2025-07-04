@@ -1,27 +1,33 @@
+// src/components/Tecnologia.tsx
 import React from 'react';
-import Card from './ui/Card';
 import Heading from './ui/Heading';
 import { motion } from 'framer-motion';
 
+const imageUrl = 'https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/4.webp';
+
 const Tecnologia = () => {
   return (
-    <section id="tecnologia">
-      <Card>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <motion.div 
-            className="w-full h-80 rounded-lg bg-cover bg-center"
-            style={{ backgroundImage: "url('https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/4.webp')" }}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          />
-          <div className="text-center md:text-left">
-            <Heading as="h2">A Sinfonia da Inteligência</Heading>
-            <p className="mt-4 text-slate-300 text-lg">Na Aurora, não tratamos a IA como um simples recurso, mas como uma arte. Nós esculpimos a inteligência, inspirados pelos princípios da otimização extrema. Onde outros usam a força bruta, nós orquestramos uma coreografia de modelos, dados e decisões.</p>
-          </div>
-        </div>
-      </Card>
+    <section 
+      id="tecnologia"
+      className="w-full min-h-[70vh] bg-cover bg-fixed bg-center"
+      style={{ backgroundImage: `url(${imageUrl})` }}
+    >
+      <div className="w-full min-h-[70vh] flex items-center justify-center bg-black/60">
+        <motion.div
+          className="mx-auto max-w-4xl px-6 lg:px-8 text-center"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.7 }}
+        >
+          <Heading as="h2">A Sinfonia da Inteligência</Heading>
+          <p className="mt-6 text-lg leading-8 text-aurora-text-secondary">
+            Na Aurora, não tratamos a IA como um simples recurso, mas como uma arte. Onde outros usam a força bruta, nós orquestramos uma coreografia de modelos, dados e decisões.
+          </p>
+        </motion.div>
+      </div>
     </section>
   );
 };
+
 export default Tecnologia;

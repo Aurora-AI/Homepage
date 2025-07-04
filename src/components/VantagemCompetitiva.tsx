@@ -1,3 +1,4 @@
+// src/components/VantagemCompetitiva.tsx
 import React from 'react';
 import Card from './ui/Card';
 import Heading from './ui/Heading';
@@ -8,9 +9,13 @@ const VantagemCompetitiva = () => {
     <section id="vantagem-competitiva">
       <Card>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="text-center md:text-left">
+          <div className="text-center md:text-left md:order-last">
             <Heading as="h2">Nossa Vantagem Competitiva Assimétrica</Heading>
-            <p className="mt-4 text-slate-300 text-lg">A Aurora não é apenas construída com IA; ela é construída por IA. Nossa metodologia e arquitetura nos permitem entregar soluções de software e inteligência de forma que desequilibra o mercado, gerando velocidade, assertividade e uma fração mínima dos custos de abordagens tradicionais.</p>
+            <p className="mt-4 text-aurora-text-secondary text-lg">A Aurora não é apenas construída com IA; ela é construída por IA. Nossa metodologia nos permite entregar soluções com velocidade e custos que redefinem os benchmarks de mercado.</p>
+            <div className="mt-6 border-t border-aurora-border pt-6">
+              <h4 className="font-bold text-white">A Inteligência em Ação: O Aurora Negotiation GPS</h4>
+              <p className="mt-2 text-aurora-text-secondary text-base">Nossa primeira "Ferramenta" é um sistema proativo que lê e compreende e-mails e transcrições para identificar Pontos de Dor e Objeções, sugerindo a "Próxima Melhor Ação".</p>
+            </div>
           </div>
           <motion.div 
             className="w-full h-80 rounded-lg bg-cover bg-center"
