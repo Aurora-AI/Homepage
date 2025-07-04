@@ -1,18 +1,32 @@
 // src/components/Tese.tsx
 import React from 'react';
-import Card from './ui/Card'; // Importando o novo componente
+import Card from './ui/Card';
+import Heading from './ui/Heading';
+import { motion } from 'framer-motion';
 
 const Tese = () => {
   return (
     <section id="tese">
       <Card>
-        <div className="mx-auto max-w-xl text-center">
-          <h2 className="text-3xl font-bold text-aurora-text-primary sm:text-4xl">
-            O Paradigma "Intelligence-First"
-          </h2>
-          <p className="mt-4 text-aurora-text-secondary text-lg">
-            O software tradicional reage. A Aurora antecipa. Nossa filosofia inverte o roteiro do desenvolvimento: antes de escrever uma única linha de código, usamos IA para mapear o DNA do problema. Nosso primeiro produto é sempre uma Máquina de Geração de Insights, garantindo que cada solução que construímos atenda a uma necessidade profunda e validada do mercado.
-          </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          {/* Coluna da Imagem */}
+          <motion.div 
+            className="w-full h-80 rounded-lg bg-cover bg-center"
+            style={{ backgroundImage: "url('https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/23.webp')" }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+          ></motion.div>
+
+          {/* Coluna do Texto */}
+          <div className="text-center md:text-left">
+            <Heading as="h2">
+              O Paradigma "Intelligence-First"
+            </Heading>
+            <p className="mt-4 text-aurora-text-secondary text-lg">
+              O software tradicional reage. A Aurora antecipa. Nossa filosofia inverte o roteiro do desenvolvimento: antes de escrever uma única linha de código, usamos IA para mapear o DNA do problema. Nosso primeiro produto é sempre uma Máquina de Geração de Insights, garantindo que cada solução que construímos atenda a uma necessidade profunda e validada do seu negócio.
+            </p>
+          </div>
         </div>
       </Card>
     </section>
