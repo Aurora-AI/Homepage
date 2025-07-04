@@ -7,8 +7,11 @@ const Header = () => {
     { name: "Tese", href: "#tese" },
     { name: "Arquitetura", href: "#arquitetura" },
     { name: "Mapeamento Global", href: "#aios-vision" },
+    { name: "Tecnologia", href: "#tecnologia" },
+    { name: "Vantagem Competitiva", href: "#vantagem-competitiva" },
     { name: "Metodologia", href: "#metodologia" },
     { name: "Produto", href: "#produto" },
+    { name: "Soberania Cognitiva", href: "#soberania-cognitiva" },
     { name: "Roteiro", href: "#roteiro" },
   ];
 
