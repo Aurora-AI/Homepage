@@ -5,33 +5,29 @@ import Header from '../components/Header.tsx';
 import Hero from '../components/Hero.tsx';
 import Tese from '../components/Tese.tsx';
 import Arquitetura from '../components/Arquitetura.tsx';
-import Tecnologia from '../components/Tecnologia.tsx';
-import AIOSVision from '../components/AIOSVision.tsx';
-import VantagemCompetitiva from '../components/VantagemCompetitiva.tsx';
-import SoberaniaCognitiva from '../components/SoberaniaCognitiva.tsx';
 import Metodologia from '../components/Metodologia.tsx';
 import Produto from '../components/Produto.tsx';
 import Roteiro from '../components/Roteiro.tsx';
 import Status from '../components/Status.tsx';
+import Footer from '../components/Footer.tsx';
 ---
 
 <Layout title="Aurora | Construindo o Próximo Paradigma de Software">
   <Header client:load />
-	<main class="flex flex-col items-center w-full">
-		<Hero client:load />
+  <main>
+    <Hero client:load />
     
-    {/* Container para os blocos de conteúdo com espaçamento via gap */}
-		<div class="w-full max-w-4xl px-4 py-16 flex flex-col gap-24">
-			<Tese client:visible />
-			<Arquitetura client:visible />
-      <Tecnologia client:visible />
-      <AIOSVision client:visible />
-      <VantagemCompetitiva client:visible />
-      <Metodologia client:visible />
-      <Produto client:visible />
-      <SoberaniaCognitiva client:visible />
-      <Roteiro client:visible />
-      <Status client:visible />
-		</div>
-	</main>
+    <div class="flex flex-col items-center w-full px-4">
+      {/* Container mais largo para o conteúdo principal */}
+      <div class="w-full max-w-7xl py-16 flex flex-col gap-16 md:gap-24">
+        <Tese client:visible />
+        <Arquitetura client:visible />
+        <Metodologia client:visible />
+        <Produto client:visible />
+        <Roteiro client:visible />
+        <Status client:visible />
+      </div>
+    </div>
+  </main>
+  <Footer client:visible />
 </Layout>
