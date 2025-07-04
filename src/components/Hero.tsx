@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <section 
-      className="h-screen w-full flex items-center justify-end hero-background" // Estilo movido para esta classe
-    >
+    // CORREÇÃO: Removido o background-image daqui.
+    // A seção agora é um container transparente que ficará sobre o fundo global.
+    <section className="h-screen w-full flex items-center justify-end">
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         animate={{ opacity: 1, x: 0 }}
