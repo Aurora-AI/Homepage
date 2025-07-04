@@ -6,6 +6,7 @@ const Header = () => {
   const navItems = [
     { name: "Tese", href: "#tese" },
     { name: "Arquitetura", href: "#arquitetura" },
+    { name: "Mapeamento Global", href: "#aios-vision" },
     { name: "Metodologia", href: "#metodologia" },
     { name: "Produto", href: "#produto" },
     { name: "Roteiro", href: "#roteiro" },
