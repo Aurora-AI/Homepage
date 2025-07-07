@@ -1,12 +1,16 @@
 // Caminho do arquivo: src/pages/index.astro
 ---
+// A importação que resolve o erro de build.
 import Layout from '../layouts/Layout.astro';
+
+// Importações dos componentes da página.
 import Header from '../components/layout/Header.tsx';
 import HeroSection from '../components/sections/HeroSection.tsx';
 import ArchitectureSection from '../components/sections/ArchitectureSection.tsx';
 import AIOSVision from '../components/AIOSVision.tsx';
 import Footer from '../components/layout/Footer.tsx';
 ---
+
 <Layout title="Aurora Homepage | O Futuro da Inteligência">
 	<Header client:load />
 
@@ -21,7 +25,11 @@ import Footer from '../components/layout/Footer.tsx';
 
 <style is:global>
 	/* Estilos globais para a página */
+	html {
+		scroll-behavior: smooth;
+	}
 	body {
 		background-color: #0c0a09; /* Um fundo escuro base */
+		color: #e2e8f0; /* Cor de texto padrão suave */
 	}
 </style>
