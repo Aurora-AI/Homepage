@@ -1,9 +1,8 @@
 // Caminho do arquivo: src/pages/index.astro
----
-// A importação que resolve o erro de build.
-import Layout from '../layouts/Layout.astro';
 
-// Importações dos componentes da página.
+---
+// ATUALIZAÇÃO: Importação do Layout agora ativa e o código da página está simplificado.
+import Layout from '../layouts/Layout.astro';
 import Header from '../components/layout/Header.tsx';
 import HeroSection from '../components/sections/HeroSection.tsx';
 import ArchitectureSection from '../components/sections/ArchitectureSection.tsx';
@@ -24,12 +23,15 @@ import Footer from '../components/layout/Footer.tsx';
 </Layout>
 
 <style is:global>
-	/* Estilos globais para a página */
 	html {
 		scroll-behavior: smooth;
 	}
 	body {
-		background-color: #0c0a09; /* Um fundo escuro base */
-		color: #e2e8f0; /* Cor de texto padrão suave */
+		background-color: #0c0a09; 
+		color: #e2e8f0; 
+		font-family: 'Roboto', sans-serif;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Exo 2', sans-serif;
 	}
 </style>
