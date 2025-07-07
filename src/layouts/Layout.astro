@@ -1,5 +1,6 @@
 ---
-import Header from '../components/layout/Header.tsx';
+import Header from '../components/Header.tsx';
+import Footer from '../components/Footer.tsx';
 
 interface Props {
   title: string;
@@ -9,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-br" class="scroll-smooth bg-aurora-bg">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Aurora: Construindo o Próximo Paradigma de Software." />
@@ -22,24 +23,11 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
-  <body class="font-sans text-slate-300">
-    <div class="fixed inset-0 z-[-1] overflow-hidden">
-      <video
-        class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover -translate-x-1/2 -translate-y-1/2"
-        autoplay
-        loop
-        muted
-        playsinline
-      >
-        <source src="https://storage.googleapis.com/aurora-homepage-assets-prod1/Chat.mp4" type="video/mp4" />
-      </video>
-      <div class="absolute inset-0 bg-black/70"></div>
-    </div>
-    
+  <body class="font-sans text-white/90">
     <Header client:load />
-
-    <div class="relative z-10">
+    <main>
       <slot />
-    </div>
+    </main>
+    <Footer client:visible />
   </body>
 </html>

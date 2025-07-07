@@ -1,50 +1,53 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Arquitetura: React.FC = () => {
-  const imageUrl = 'https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/15.webp';
-
-  const sectionVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.8,
-        ease: [0.6, 0.05, -0.01, 0.9],
-        when: "beforeChildren",
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
-
+const Arquitetura = () => {
   return (
-    <motion.section
+    <motion.section 
       id="arquitetura"
-      className="relative py-20 px-4 md:py-32 bg-darker-blue"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, amount: 0.4 }}
-      variants={sectionVariants}
+      className="py-24 sm:py-32 bg-darker-blue"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
     >
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-        <motion.div variants={itemVariants} className="lg:order-2">
-          <img src={imageUrl} alt="Arquitetura Aurora" 
-               className="w-full h-auto object-cover rounded-lg shadow-lg ring-1 ring-white/10" />
-        </motion.div>
-        <motion.div variants={itemVariants} className="lg:order-1">
-          <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6">
-             Arquitetura por Trás da Nossa Inteligência
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-16">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            O Cérebro Híbrido: Orquestrando a Inteligência onde ela é Mais Eficiente.
           </h2>
-          <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
-            Aqui iremos detalhar os pilares fundamentais que sustentam nossas soluções, garantindo escalabilidade, segurança e performance inigualáveis. Nossa base é construída para a complexidade do mundo real, com uma agilidade que redefine os limites do software.
+        </div>
+        
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
+          <div className="space-y-8">
+            <div className="border-l-4 border-cyan-accent pl-6">
+              <h3 className="text-xl font-semibold text-white">Inteligência On-Device</h3>
+              <p className="mt-2 text-slate-300">
+                <strong>Velocidade e Privacidade no Dispositivo.</strong> Utilizamos SLMs de ponta (Gemma, Phi-3) para executar tarefas instantaneamente, mesmo offline, garantindo que dados sensíveis nunca saiam da máquina do cliente.
+              </p>
+            </div>
+            
+            <div className="border-l-4 border-purple-accent pl-6">
+              <h3 className="text-xl font-semibold text-white">Inteligência na Nuvem</h3>
+              <p className="mt-2 text-slate-300">
+                <strong>Poder de Raciocínio Ilimitado.</strong> Para análises profundas, nosso AuroraRouter aciona LLMs de classe mundial como Gemini, garantindo máxima capacidade para os desafios mais complexos.
+              </p>
+            </div>
+          </div>
+          
+          <div className="flex items-center justify-center">
+            <img 
+              src="https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/15.webp"
+              alt="Arquitetura Aurora"
+              className="rounded-lg shadow-xl ring-1 ring-white/10"
+            />
+          </div>
+        </div>
+        
+        <div className="mt-16 text-center">
+          <p className="text-lg font-medium text-cyan-200">
+            O Resultado: O equilíbrio perfeito entre custo, performance e segurança, impulsionando uma nova era de agilidade e inteligência para sua empresa.
           </p>
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );
