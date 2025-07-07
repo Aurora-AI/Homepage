@@ -1,24 +1,27 @@
 // Caminho do arquivo: src/pages/index.astro
 ---
-// ATUALIZAÇÃO: Adicionada a importação do componente de Layout.
 import Layout from '../layouts/Layout.astro';
-
-// Importações dos componentes da página
 import Header from '../components/layout/Header.tsx';
 import HeroSection from '../components/sections/HeroSection.tsx';
 import ArchitectureSection from '../components/sections/ArchitectureSection.tsx';
-import AIOSVision from '../components/AIOSVision.tsx'; // Usando o nome corrigido do componente
+import AIOSVision from '../components/AIOSVision.tsx';
 import Footer from '../components/layout/Footer.tsx';
 ---
+<Layout title="Aurora Homepage | O Futuro da Inteligência">
+	<Header client:load />
 
-<Layout title="Aurora Homepage">
-  <Header client:load />
+	<main class="relative">
+		<HeroSection client:idle />
+		<ArchitectureSection client:visible />
+		<AIOSVision client:visible />
+	</main>
 
-  <main class="relative">
-    <HeroSection client:visible />
-    <ArchitectureSection client:visible />
-    <AIOSVision client:visible />
-  </main>
-
-  <Footer client:visible />
+	<Footer client:visible />
 </Layout>
+
+<style is:global>
+	/* Estilos globais para a página */
+	body {
+		background-color: #0c0a09; /* Um fundo escuro base */
+	}
+</style>
