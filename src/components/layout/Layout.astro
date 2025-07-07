@@ -10,12 +10,22 @@ import '../styles/global.css';
 <!doctype html>
 <html lang="pt-br" class="scroll-smooth">
 	<head>
-		{/* ... (conteúdo do head permanece o mesmo) ... */}
+		<meta charset="UTF-8" />
+		<meta name="description" content="Aurora: Construindo o Próximo Paradigma de Software." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 	</head>
+  {/* O corpo da página agora tem um fundo sólido, não um vídeo */}
 	<body class="bg-aurora-bg font-sans text-white/90">
     <Header client:load />
-    <div class="relative">
+    <main class="relative z-10">
       <slot />
-    </div>
+    </main>
 	</body>
 </html>
