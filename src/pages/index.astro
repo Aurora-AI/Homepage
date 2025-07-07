@@ -1,17 +1,24 @@
 // Caminho do arquivo: src/pages/index.astro
-
 ---
-// ... outras importações
-import AiosSection from '../components/sections/AiosSection.tsx';
-// ...
+// ATUALIZAÇÃO: Adicionada a importação do componente de Layout.
+import Layout from '../layouts/Layout.astro';
+
+// Importações dos componentes da página
+import Header from '../components/layout/Header.tsx';
+import HeroSection from '../components/sections/HeroSection.tsx';
+import ArchitectureSection from '../components/sections/ArchitectureSection.tsx';
+import AIOSVision from '../components/AIOSVision.tsx'; // Usando o nome corrigido do componente
+import Footer from '../components/layout/Footer.tsx';
 ---
 
 <Layout title="Aurora Homepage">
-  <main>
-    <ArchitectureSection />
+  <Header client:load />
 
-    {/* Nova Seção AIOS */}
-    <AiosSection client:visible />
+  <main class="relative">
+    <HeroSection client:visible />
+    <ArchitectureSection client:visible />
+    <AIOSVision client:visible />
+  </main>
 
-    </main>
+  <Footer client:visible />
 </Layout>
