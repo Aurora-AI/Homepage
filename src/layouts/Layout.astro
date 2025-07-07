@@ -1,38 +1,45 @@
 ---
+import Header from '../components/layout/Header.tsx';
+
 interface Props {
   title: string;
-  description?: string;
-  image?: string;
 }
 
-const { 
-  title, 
-  description = "A Aurora está construindo o próximo paradigma de software com inteligência artificial. Descubra nossa visão revolucionária.", 
-  image = "/Puzzel_Aurora.png" 
-} = Astro.props;
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-br" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
+    <meta name="description" content="Aurora: Construindo o Próximo Paradigma de Software." />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <meta name="description" content={description} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={new URL(image, Astro.url.origin).href} />
-    <meta property="og:url" content={Astro.url.href} />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-gradient-to-br from-slate-950 to-slate-800 font-sans text-gray-100 min-h-screen">
-    <slot />
+  <body class="bg-aurora-bg font-sans text-slate-300">
+    <div class="fixed inset-0 z-[-1] overflow-hidden">
+      <video
+        class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover -translate-x-1/2 -translate-y-1/2"
+        autoplay
+        loop
+        muted
+        playsinline
+      >
+        <source src="https://storage.googleapis.com/aurora-homepage-assets-prod1/Chat.mp4" type="video/mp4" />
+      </video>
+      <div class="absolute inset-0 bg-black/60"></div>
+    </div>
+    
+    <Header client:load />
+
+    <div class="relative z-10">
+      <slot />
+    </div>
   </body>
 </html>

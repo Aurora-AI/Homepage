@@ -1,0 +1,6 @@
+import{j as a}from"./jsx-runtime.C-wpX9Mq.js";import"./index.BKN2WBQQ.js";import{c as e}from"./createLucideIcon.C61HSOfS.js";/**
+ * @license lucide-react v0.525.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const o=[["path",{d:"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z",key:"1xq2db"}]],s=e("zap",o),i=()=>a.jsxs("section",{id:"arquitetura",className:"text-center",children:[a.jsxs("div",{className:"flex justify-center items-center gap-4 mb-4",children:[a.jsx(s,{className:"w-10 h-10 text-purple-400"}),a.jsx("h2",{className:"text-3xl font-bold text-purple-300",children:"A Sinfonia da Inteligência"})]}),a.jsx("p",{className:"max-w-3xl mx-auto text-lg text-slate-300",children:"Na Aurora, não tratamos a IA como um simples recurso, mas como uma arte. Onde outros usam a força bruta, nós orquestramos uma coreografia de modelos, dados e decisões. Cada agente, do menor SLM ao mais poderoso LLM, tem seu papel, tocando sua nota no momento exato para criar uma composição de eficiência e insight que é maior que a soma de suas partes."})]});export{i as default};
