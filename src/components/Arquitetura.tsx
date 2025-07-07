@@ -1,33 +1,18 @@
-// src/components/Arquitetura.tsx
+// Caminho do arquivo: src/components/Arquitetura.tsx
+
 import React from 'react';
-import Heading from './ui/Heading';
-import { motion } from 'framer-motion';
+import { Zap } from 'lucide-react';
 
-const imageUrl = 'https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/15.webp';
-
-const Arquitetura = () => {
+const Arquitetura: React.FC = () => {
   return (
-    <section id="arquitetura" className="w-full py-24 sm:py-32">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2 items-center">
-          <div className="lg:pr-8 lg:pt-4 text-center lg:text-left">
-            <Heading as="h2">O Cérebro Híbrido: Orquestrando a Inteligência</Heading>
-            <p className="mt-6 text-lg leading-8 text-aurora-text-secondary">
-              O equilíbrio perfeito entre custo, performance e segurança, impulsionando uma nova era de agilidade e inteligência para sua empresa.
-            </p>
-          </div>
-          <motion.img
-            src={imageUrl}
-            alt="Visualização abstrata de um cadeado digital simbolizando segurança"
-            className="w-full max-w-none rounded-xl shadow-xl ring-1 ring-white/10 md:w-[48rem]"
-            width={2432}
-            height={1442}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7 }}
-          />
-        </div>
+    <section id="arquitetura" className="text-center">
+      <div className="flex justify-center items-center gap-4 mb-4">
+        <Zap className="w-10 h-10 text-purple-400" />
+        <h2 className="text-3xl font-bold text-purple-300">A Sinfonia da Inteligência</h2>
       </div>
+      <p className="max-w-3xl mx-auto text-lg text-slate-300">
+        Na Aurora, não tratamos a IA como um simples recurso, mas como uma arte. Onde outros usam a força bruta, nós orquestramos uma coreografia de modelos, dados e decisões. Cada agente, do menor SLM ao mais poderoso LLM, tem seu papel, tocando sua nota no momento exato para criar uma composição de eficiência e insight que é maior que a soma de suas partes.
+      </p>
     </section>
   );
 };
