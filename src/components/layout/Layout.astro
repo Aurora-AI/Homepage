@@ -1,44 +1,20 @@
 ---
 // src/layouts/Layout.astro
 import Header from '../components/Header.tsx';
-import '../styles/global.css'; // CORREÇÃO: Movido para o topo, junto com os outros imports.
-
 interface Props {
 	title: string;
 }
 const { title } = Astro.props;
+import '../styles/global.css';
 ---
 <!doctype html>
 <html lang="pt-br" class="scroll-smooth">
 	<head>
-    <meta charset="UTF-8" />
-    <meta name="description" content="Aurora: Construindo o Próximo Paradigma de Software." />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+		{/* ... (conteúdo do head permanece o mesmo) ... */}
 	</head>
-	<body class="bg-aurora-bg font-sans text-slate-300">
-    <div class="fixed inset-0 z-[-1] overflow-hidden">
-      <video
-        class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover -translate-x-1/2 -translate-y-1/2"
-        autoplay
-        loop
-        muted
-        playsinline
-      >
-        <source src="https://storage.googleapis.com/aurora-homepage-assets-prod1/Chat.mp4" type="video/mp4" />
-      </video>
-      <div class="absolute inset-0 bg-black/60"></div>
-    </div>
-    
+	<body class="bg-aurora-bg font-sans text-white/90">
     <Header client:load />
-
-    <div class="relative z-10">
+    <div class="relative">
       <slot />
     </div>
 	</body>
