@@ -1,1 +1,0 @@
-import{j as a}from"./jsx-runtime.C-wpX9Mq.js";import"./index.BKN2WBQQ.js";const l=({as:s="h2",children:t,className:e=""})=>a.jsx(s,{className:`text-2xl font-bold text-white sm:text-3xl ${e}`,children:t});export{l as H};
