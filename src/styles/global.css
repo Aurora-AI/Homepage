@@ -1,8 +1,7 @@
 /* src/styles/global.css */
-
-.hero-background {
-  background-image: url('/Puzzel_Aurora.png');
+.hero-banner-bg {
+  background-image: url('https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/Puzzel_Aurora.png');
   background-size: contain;
-  background-position: center left;
+  background-position: center;
   background-repeat: no-repeat;
 }
