@@ -1,0 +1,4 @@
+// Caminho do arquivo: .vscode/settings.json
+{
+  "npm.packageManager": "pnpm"
+}
