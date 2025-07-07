@@ -1,1 +1,0 @@
-import{j as x}from"./motion.Dnv5r6eQ.js";import"./index.BKN2WBQQ.js";const i=({as:t="h2",children:s,className:e=""})=>{const o=`text-aurora-text-primary ${{h1:"text-4xl md:text-5xl font-bold tracking-tight",h2:"text-3xl md:text-4xl font-bold",h3:"text-2xl font-semibold",h4:"text-xl font-semibold"}[t]} ${e}`;return x.jsx(t,{className:o,children:s})};export{i as H};
