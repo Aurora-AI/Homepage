@@ -1,32 +1,17 @@
+// Caminho do arquivo: src/pages/index.astro
+
 ---
-// src/pages/index.astro
-import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.tsx';
-import Tese from '../components/Tese.tsx';
-import Arquitetura from '../components/Arquitetura.tsx';
-import Tecnologia from '../components/Tecnologia.tsx';
-import VantagemCompetitiva from '../components/VantagemCompetitiva.tsx';
-import AIOSVision from '../components/AIOSVision.tsx';
-import CerebroDoMundo from '../components/CerebroDoMundo.tsx';
-import SoberaniaCognitiva from '../components/SoberaniaCognitiva.tsx';
-import EficienciaRadical from '../components/EficienciaRadical.tsx';
-import Footer from '../components/Footer.tsx';
+// ... outras importações
+import AiosSection from '../components/sections/AiosSection.tsx';
+// ...
 ---
 
-<Layout title="Aurora | Construindo o Próximo Paradigma de Software">
+<Layout title="Aurora Homepage">
   <main>
-    <Hero client:load />
-    
-    {/* A ordem do storytelling */}
-    <Tese client:visible />
-    <Arquitetura client:visible />
-    <EficienciaRadical client:visible />
-    <Tecnologia client:visible />
-    <VantagemCompetitiva client:visible />
-    <AIOSVision client:visible />
-    <CerebroDoMundo client:visible />
-    <SoberaniaCognitiva client:visible />
+    <ArchitectureSection />
 
-  </main>
-  <Footer client:visible />
+    {/* Nova Seção AIOS */}
+    <AiosSection client:visible />
+
+    </main>
 </Layout>
