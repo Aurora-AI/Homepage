@@ -1,34 +1,30 @@
 ---
+// src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
-import Header from '../components/layout/Header.tsx';
 import Hero from '../components/Hero.tsx';
 import Tese from '../components/Tese.tsx';
-import Arquitetura from '../components/Arquitetura.tsx';
-import Tecnologia from '../components/Tecnologia.tsx';
-import VantagemCompetitiva from '../components/VantagemCompetitiva.tsx';
-import AIOSVision from '../components/AIOSVision.tsx';
-import CerebroDoMundo from '../components/CerebroDoMundo.tsx';
-import SoberaniaCognitiva from '../components/SoberaniaCognitiva.tsx';
-import Footer from '../components/layout/Footer.tsx';
+// ... outros imports ...
+import Footer from '../components/Footer.tsx';
 ---
 
-<Layout title="Aurora | Construindo o Próximo Paradigma de Software">
-  <Header client:load />
+<Layout title="Aurora | O Futuro dos Sistemas Operacionais">
   <main>
     <Hero client:load />
-    
-    <div class="flex flex-col items-center w-full">
-      <AIOSVision client:visible />
 
-      <div class="w-full max-w-7xl py-16 px-4 flex flex-col gap-16 md:gap-24">
-        <Tese client:visible />
-        <Arquitetura client:visible />
-        <Tecnologia client:visible />
-        <VantagemCompetitiva client:visible />
-        <CerebroDoMundo client:visible />
-        <SoberaniaCognitiva client:visible />
-      </div>
-    </div>
+    {/* Começamos com os conceitos mais diretos */}
+    <Tese client:visible />
+    <Arquitetura client:visible />
+    <VantagemCompetitiva client:visible />
+
+    {/* Seção de credibilidade */}
+    <SocialProof client:visible />
+
+    {/* Mergulhamos na visão mais profunda no final */}
+    <Tecnologia client:visible />
+    <EficienciaRadical client:visible />
+    <AIOSVision client:visible />
+    <CerebroDoMundo client:visible />
+    <SoberaniaCognitiva client:visible />
   </main>
   <Footer client:visible />
 </Layout>
