@@ -1,32 +1,47 @@
-// src/components/VantagemCompetitiva.tsx
 import React from 'react';
-import Card from './ui/Card';
-import Heading from './ui/Heading';
 import { motion } from 'framer-motion';
 
-const VantagemCompetitiva = () => {
+const VantagemCompetitiva: React.FC = () => {
   return (
-    <section id="vantagem-competitiva">
-      <Card>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="text-center md:text-left md:order-last">
-            <Heading as="h2">Nossa Vantagem Competitiva Assimétrica</Heading>
-            <p className="mt-4 text-aurora-text-secondary text-lg">A Aurora não é apenas construída com IA; ela é construída por IA. Nossa metodologia nos permite entregar soluções com velocidade e custos que redefinem os benchmarks de mercado.</p>
-            <div className="mt-6 border-t border-aurora-border pt-6">
-              <h4 className="font-bold text-white">A Inteligência em Ação: O Aurora Negotiation GPS</h4>
-              <p className="mt-2 text-aurora-text-secondary text-base">Nossa primeira "Ferramenta" é um sistema proativo que lê e compreende e-mails e transcrições para identificar Pontos de Dor e Objeções, sugerindo a "Próxima Melhor Ação".</p>
-            </div>
-          </div>
+    <motion.section 
+      className="w-full py-24 sm:py-32 bg-dark-blue px-4"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] }}
+    >
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <motion.div 
-            className="w-full h-80 rounded-lg bg-cover bg-center"
-            style={{ backgroundImage: "url('https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/16.webp')" }}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5 }}
-          />
+            className="w-full h-96 rounded-2xl overflow-hidden ring-1 ring-white/20 shadow-2xl"
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.6, 0.05, -0.01, 0.9] }}
+          >
+            <img 
+              src="https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/16.webp"
+              alt="Vantagem Competitiva Aurora"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.4, ease: [0.6, 0.05, -0.01, 0.9] }}
+          >
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
+              Nossa Vantagem Competitiva
+            </h2>
+            <p className="text-lg md:text-xl text-slate-300 leading-relaxed">
+              Descubra nossa Vantagem Competitiva: soluções que transformam desafios em oportunidades com insights preditivos e eficiência incomparável.
+            </p>
+          </motion.div>
         </div>
-      </Card>
-    </section>
+      </div>
+    </motion.section>
   );
 };
+
 export default VantagemCompetitiva;

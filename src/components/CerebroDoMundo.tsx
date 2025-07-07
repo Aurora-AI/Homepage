@@ -1,19 +1,38 @@
-// Caminho do arquivo: src/components/CerebroDoMundo.tsx
-
 import React from 'react';
-import { BrainCircuit } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const CerebroDoMundo: React.FC = () => {
   return (
-    <section id="cerebro-mundo" className="text-center">
-       <div className="flex justify-center items-center gap-4 mb-4">
-        <BrainCircuit className="w-10 h-10 text-cyan-400" />
-        <h2 className="text-3xl font-bold text-cyan-300">O Cérebro do Mundo: A Próxima Camada da Realidade</h2>
+    <motion.section 
+      className="relative min-h-screen flex items-center justify-center px-4 text-center bg-cover bg-center bg-fixed"
+      style={{ backgroundImage: "url('https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/20.webp')" }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true, amount: 0.4 }}
+      transition={{ duration: 0.8, ease: [0.6, 0.05, -0.01, 0.9] }}
+    >
+      <div className="absolute inset-0 bg-black/60"></div>
+      <div className="relative z-10 max-w-4xl mx-auto py-24">
+        <motion.h2 
+          className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2, ease: [0.6, 0.05, -0.01, 0.9] }}
+        >
+          O Cérebro do Mundo
+        </motion.h2>
+        <motion.p 
+          className="text-lg md:text-xl lg:text-2xl text-slate-300 leading-relaxed max-w-3xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.4, ease: [0.6, 0.05, -0.01, 0.9] }}
+        >
+          O Cérebro do Mundo: Conectando informações e gerando insights em escala global. Nossas soluções de IA acessam e processam dados de forma distribuída para entregar inteligência acionável onde você mais precisa.
+        </motion.p>
       </div>
-      <p className="max-w-3xl mx-auto text-lg text-slate-300">
-        A Aurora não é apenas uma ferramenta; é a fábrica projetada para construir, gerenciar e otimizar os agentes que habitarão o futuro. Nossa arquitetura foi concebida para ser uma plataforma de cognição distribuída que aprende, raciocina e age com uma eficiência sem precedentes, criando uma nova camada de interação entre o digital e o real.
-      </p>
-    </section>
+    </motion.section>
   );
 };
 

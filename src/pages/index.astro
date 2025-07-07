@@ -1,20 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.tsx';
-import ParadigmaIntelligenceFirst from '../components/ParadigmaIntelligenceFirst.astro';
-import ArquiteturaProprietaria from '../components/ArquiteturaProprietaria.astro';
-import Metodologia from '../components/Metodologia.astro';
-import VisaoLongoPrazo from '../components/VisaoLongoPrazo.astro';
+import Header from '../components/layout/Header.tsx';
+import Footer from '../components/layout/Footer.tsx';
 import SocialProof from '../components/SocialProof.tsx';
+
+// Componentes das Seções de Conteúdo
+import Hero from '../components/Hero.tsx';
+import Tese from '../components/Tese.tsx';
+import Arquitetura from '../components/Arquitetura.tsx';
+import EficienciaRadical from '../components/EficienciaRadical.tsx';
+import Tecnologia from '../components/Tecnologia.tsx';
+import VantagemCompetitiva from '../components/VantagemCompetitiva.tsx';
+import AIOSVision from '../components/AIOSVision.tsx';
+import CerebroDoMundo from '../components/CerebroDoMundo.tsx';
+import SoberaniaCognitiva from '../components/SoberaniaCognitiva.tsx';
 ---
 
-<Layout title="Aurora | O Futuro dos Sistemas Operacionais">
-  <main>
+<Layout title="Aurora | Construindo o Próximo Paradigma de Software">
+  <Header client:load />
+
+  <main class="relative z-10 w-full">
     <Hero client:visible />
-    <ParadigmaIntelligenceFirst />
-    <ArquiteturaProprietaria />
-    <Metodologia />
-    <VisaoLongoPrazo />
+    <Tese client:visible />
+    <Arquitetura client:visible />
+    <EficienciaRadical client:visible />
+    <Tecnologia client:visible />
+    <VantagemCompetitiva client:visible />
+    <AIOSVision client:visible />
+    <CerebroDoMundo client:visible />
+    <SoberaniaCognitiva client:visible />
     <SocialProof client:visible />
   </main>
+
+  <Footer client:load />
 </Layout>
