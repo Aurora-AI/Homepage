@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const ASSETS_BASE = import.meta.env.PUBLIC_ASSETS_BASE;
+
 const VantagemCompetitiva: React.FC = () => {
-  const imageUrl = 'https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/16.webp';
+  const imageUrl = `${ASSETS_BASE}/16-nbHdLwznbNFlZznF4UdIJqVcXRX7o3.webp`;
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },

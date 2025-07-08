@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const ASSETS_BASE = import.meta.env.PUBLIC_ASSETS_BASE;
+
 const SoberaniaCognitiva: React.FC = () => {
-  const imageUrl = 'https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/7.webp';
+  const imageUrl = `${ASSETS_BASE}/7-01dQTRGRFSCmTFGJGubQrnBXdMa3U6.webp`;
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },

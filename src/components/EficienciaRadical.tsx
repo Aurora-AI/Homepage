@@ -4,6 +4,8 @@ import Card from './ui/Card';
 import Heading from './ui/Heading';
 import { motion } from 'framer-motion';
 
+const ASSETS_BASE = import.meta.env.PUBLIC_ASSETS_BASE;
+
 // Ícones SVG para as aplicações
 const IconChat = () => ( <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-aurora-accent-purple"><path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg> );
 const IconGavel = () => ( <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-8 h-8 text-aurora-accent-purple"><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg> );
@@ -21,7 +23,7 @@ const Pillar = ({ icon, title, description }: { icon: React.ReactNode, title: st
 );
 
 const EficienciaRadical = () => {
-  const videoUrl = 'https://storage.googleapis.com/aurora-homepage-assets-prod1/Chat.mp4';
+  const videoUrl = `${ASSETS_BASE}/Chat-8IXIB48g87fszNYwYQESCKRLVtNLWu.mp4`;
   
   return (
     <motion.section id="eficiencia-radical">

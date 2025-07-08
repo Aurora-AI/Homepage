@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const ASSETS_BASE = import.meta.env.PUBLIC_ASSETS_BASE;
+
 const AIOSVision: React.FC = () => {
-  const imageUrl = 'https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/13.webp';
+  const imageUrl = `${ASSETS_BASE}/13-ZNOv8fGzWwKEB4O5v2HtRNn4pruf91.webp`;
 
   const sectionVariants = {
     hidden: { opacity: 0, y: 50 },
