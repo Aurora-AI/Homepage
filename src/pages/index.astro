@@ -1,31 +1,26 @@
 ---
-// src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.tsx';
 import Tese from '../components/Tese.tsx';
 import Arquitetura from '../components/Arquitetura.tsx';
+import EficienciaRadical from '../components/EficienciaRadical.tsx';
 import Tecnologia from '../components/Tecnologia.tsx';
 import VantagemCompetitiva from '../components/VantagemCompetitiva.tsx';
 import AIOSVision from '../components/AIOSVision.tsx';
 import CerebroDoMundo from '../components/CerebroDoMundo.tsx';
 import SoberaniaCognitiva from '../components/SoberaniaCognitiva.tsx';
-import EficienciaRadical from '../components/EficienciaRadical.tsx';
 import SocialProof from '../components/SocialProof.tsx';
 ---
 
 <Layout title="Aurora | O Futuro dos Sistemas Operacionais">
-  <main>
-    <Hero client:load />
-
-    {/* Os componentes são empilhados, e o espaçamento (py-24, etc.) dentro de cada um cria os blocos */}
-    <Tese client:visible />
-    <Arquitetura client:visible />
-    <EficienciaRadical client:visible />
-    <Tecnologia client:visible />
-    <VantagemCompetitiva client:visible />
-    <AIOSVision client:visible />
-    <CerebroDoMundo client:visible />
-    <SoberaniaCognitiva client:visible />
-    <SocialProof client:visible />
-  </main>
+  <Hero client:load />
+  <Tese client:visible />
+  <Arquitetura client:visible />
+  <EficienciaRadical client:visible />
+  <Tecnologia client:visible />
+  <VantagemCompetitiva client:visible />
+  <AIOSVision client:visible />
+  <CerebroDoMundo client:visible />
+  <SoberaniaCognitiva client:visible />
+  <SocialProof client:visible />
 </Layout>

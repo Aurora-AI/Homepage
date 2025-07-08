@@ -1,1 +1,0 @@
-import{j as e}from"./jsx-runtime.C-wpX9Mq.js";import"./index.BKN2WBQQ.js";const o=()=>e.jsx("footer",{className:"w-full p-8 text-center text-slate-400",children:e.jsxs("p",{children:["© ",new Date().getFullYear()," Aurora. Todos os direitos reservados."]})});export{o as default};
