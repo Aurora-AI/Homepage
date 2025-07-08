@@ -23,6 +23,9 @@ Uma homepage moderna e elegante construída com tecnologias de ponta para aprese
 git clone https://github.com/Aurora-Homepage/Homepage.git
 cd Homepage
 
+# Copie o exemplo de variáveis de ambiente
+cp .env.example .env
+
 # Instale as dependências
 npm install
 
@@ -35,6 +38,10 @@ npm run build
 # Preview do build
 npm run preview
 ```
+
+### Variáveis de Ambiente
+
+Copie `.env.example` para `.env` e ajuste `PUBLIC_ASSETS_BASE` caso deseje alterar o bucket de assets.
 
 ## 📁 Estrutura do Projeto
 

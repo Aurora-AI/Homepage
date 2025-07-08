@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const ASSETS_BASE = import.meta.env.PUBLIC_ASSETS_BASE;
+
 const Arquitetura = () => {
   return (
     <motion.section 
@@ -35,8 +37,8 @@ const Arquitetura = () => {
           </div>
           
           <div className="flex items-center justify-center">
-            <img 
-              src="https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/15.webp"
+            <img
+              src={`${ASSETS_BASE}/15-spF0ePW95YztzfdyfEN2adS11tqutX.webp`}
               alt="Arquitetura Aurora"
               className="rounded-lg shadow-xl ring-1 ring-white/10"
             />

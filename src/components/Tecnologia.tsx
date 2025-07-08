@@ -1,6 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
+const ASSETS_BASE = import.meta.env.PUBLIC_ASSETS_BASE;
+
 const sectionVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: {
@@ -21,7 +23,7 @@ const textVariants = {
 };
 
 const Tecnologia: React.FC = () => {
-  const backgroundImage = 'https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/4.webp';
+  const backgroundImage = `${ASSETS_BASE}/4-GafrljrNanRCTCx6nAA1b2oYP4PhvW.webp`;
 
   return (
     <motion.section
