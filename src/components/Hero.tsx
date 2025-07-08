@@ -5,7 +5,8 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   return (
     <section 
-      className="relative h-screen w-full flex items-center bg-aurora-bg hero-banner-bg" // CORREÇÃO: style inline removido e classe adicionada
+      className="relative h-screen w-full flex items-center bg-cover bg-center"
+      style={{ backgroundImage: "url('https://i5dvyyer3ittq48j.public.blob.vercel-storage.com/Puzzel_Aurora-b3JcFEtDNmrNYlC6R61nNvTg54Zet6.png')" }}
     >
       <div className="absolute inset-0 bg-black/30"></div>
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-8">
