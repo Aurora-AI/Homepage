@@ -22,7 +22,7 @@ const Hero = () => {
         >
           <div className="w-full md:w-1/3 text-left">
             <blockquote className="text-white text-xl font-semibold italic">
-              E se a sua empresa pudesse sentir
+              "E se a sua empresa pudesse sentir?"
             </blockquote>
             <p className="mt-4 text-slate-300">
               Com a Aurora, desvende insights ocultos e antecipe o futuro, transformando dados em decisões estratégicas e proativas.
