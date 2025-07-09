@@ -1,24 +1,41 @@
 ---
 // src/pages/index.astro
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.tsx';
 import Hero from '../components/Hero.tsx';
-// ... todos os outros imports ...
+import Tese from '../components/Tese.tsx';
+import Arquitetura from '../components/Arquitetura.tsx';
+import EficienciaRadical from '../components/EficienciaRadical.tsx';
+import Tecnologia from '../components/Tecnologia.tsx';
+import VantagemCompetitiva from '../components/VantagemCompetitiva.tsx';
+import AIOSVision from '../components/AIOSVision.tsx';
+import CerebroDoMundo from '../components/CerebroDoMundo.tsx'; // CORREÇÃO: Import que estava faltando
 import SoberaniaCognitiva from '../components/SoberaniaCognitiva.tsx';
-import MindMap from '../components/MindMap.tsx'; // Novo
+import MindMap from '../components/MindMap.tsx';
 import SocialProof from '../components/SocialProof.tsx';
+import Footer from '../components/Footer.tsx';
 ---
 
-<Layout title="Aurora | O Futuro dos Sistemas Operacionais">
+<Layout title="Aurora | Construindo o Próximo Paradigma de Software">
+  {/* O Header já é renderizado pelo Layout, não precisa ser chamado aqui. */}
   <main>
     <Hero client:load />
 
-    {/* ... outras seções ... */}
-    <CerebroDoMundo client:visible />
-    <SoberaniaCognitiva client:visible />
-
-    {/* Nova Seção do Mapa Mental */}
-    <MindMap client:visible />
-    
-    <SocialProof client:visible />
+    {/* Container para os blocos de conteúdo */}
+    <div class="flex flex-col items-center w-full px-4">
+      <div class="w-full max-w-7xl py-16 flex flex-col gap-16 md:gap-24">
+        <Tese client:visible />
+        <Arquitetura client:visible />
+        <EficienciaRadical client:visible />
+        <Tecnologia client:visible />
+        <VantagemCompetitiva client:visible />
+        <AIOSVision client:visible />
+        <CerebroDoMundo client:visible />
+        <SoberaniaCognitiva client:visible />
+        <MindMap client:visible />
+        <SocialProof client:visible />
+      </div>
+    </div>
   </main>
+  <Footer client:visible />
 </Layout>
