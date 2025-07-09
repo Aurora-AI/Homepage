@@ -9,7 +9,7 @@ const { title } = Astro.props;
 import '../styles/global.css';
 ---
 <!doctype html>
-<html lang="pt-br" class="scroll-smooth">
+<html lang="pt-br" class="scroll-smooth bg-aurora-bg">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Aurora: Construindo o Próximo Paradigma de Software." />
@@ -22,9 +22,9 @@ import '../styles/global.css';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 	</head>
-	<body class="bg-aurora-bg font-sans text-white/90 antialiased">
+	<body class="font-sans text-white/90 antialiased">
     
-    {/* Vídeo de Fundo em Loop */}
+    {/* Vídeo de Fundo Atualizado */}
     <div class="fixed inset-0 z-[-1] overflow-hidden">
       <video
         class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover -translate-x-1/2 -translate-y-1/2"
@@ -32,12 +32,11 @@ import '../styles/global.css';
         loop
         muted
         playsinline
-        src="https://i5dvyyer3ittq48j.public.blob.vercel-storage.com/Fundo%20Site%203-N8leu8F5F17Q6cy0kvaIcDRVBXpQq9.mp4"
       >
-        Seu navegador não suporta a tag de vídeo.
+        {/* CORREÇÃO: URL alterada para Fundo Site 2 */}
+        <source src="https://i5dvyyer3ittq48j.public.blob.vercel-storage.com/Fundo%20Site%202-lw8quDzq6b6Nypufhs8O0BklLFzZuK.mp4" type="video/mp4" />
       </video>
-      {/* Overlay escuro para garantir legibilidade do texto sobre o vídeo */}
-      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="absolute inset-0 bg-black/60"></div>
     </div>
 
     <Header client:load />
