@@ -4,12 +4,13 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.tsx';
 import Tese from '../components/Tese.tsx';
 import Arquitetura from '../components/Arquitetura.tsx';
+import EficienciaRadical from '../components/EficienciaRadical.tsx';
 import Tecnologia from '../components/Tecnologia.tsx';
 import VantagemCompetitiva from '../components/VantagemCompetitiva.tsx';
 import AIOSVision from '../components/AIOSVision.tsx';
 import CerebroDoMundo from '../components/CerebroDoMundo.tsx';
 import SoberaniaCognitiva from '../components/SoberaniaCognitiva.tsx';
-import EficienciaRadical from '../components/EficienciaRadical.tsx';
+import MindMap from '../components/MindMap.tsx';
 import SocialProof from '../components/SocialProof.tsx';
 ---
 
@@ -17,7 +18,8 @@ import SocialProof from '../components/SocialProof.tsx';
   <main>
     <Hero client:load />
 
-    {/* Os componentes são empilhados, e o espaçamento (py-24, etc.) dentro de cada um cria os blocos */}
+    {/* Os componentes de seção agora são blocos sólidos e independentes,
+        com espaçamento vertical definido internamente (py-24 sm:py-32) para criar ritmo. */}
     <Tese client:visible />
     <Arquitetura client:visible />
     <EficienciaRadical client:visible />
@@ -26,6 +28,7 @@ import SocialProof from '../components/SocialProof.tsx';
     <AIOSVision client:visible />
     <CerebroDoMundo client:visible />
     <SoberaniaCognitiva client:visible />
+    <MindMap client:visible />
     <SocialProof client:visible />
     
   </main>
