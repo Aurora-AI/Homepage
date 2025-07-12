@@ -1,2 +1,26 @@
-node_modules
+# Arquivos de Ambiente (Contém segredos)
 .env
+.env.*
+!.env.example
+
+# Dependências
+# Esta pasta é gerada localmente e no servidor de build com 'pnpm install'
+node_modules
+
+# Arquivos de Build e Cache
+# O conteúdo desta pasta é gerado com 'pnpm run build'
+dist/
+.astro/
+
+# Logs de erro de gerenciadores de pacotes
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Arquivos de Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração de editores (opcional, mas recomendado)
+.vscode/
+.idea/
