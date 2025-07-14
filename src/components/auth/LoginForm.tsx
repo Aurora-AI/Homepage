@@ -6,18 +6,11 @@ export default function LoginForm() {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError('');
-
     if (!password) {
       setError('Por favor, insira a senha.');
       return;
     }
-
-    // Cria o cookie 'auth_token' com a senha digitada.
-    // O cookie será válido por 1 dia (86400 segundos) em todo o site.
     document.cookie = `auth_token=${password}; path=/; max-age=86400; SameSite=Lax;`;
-
-    // Redireciona o usuário para a página do dashboard.
     window.location.href = '/dashboard';
   };
 

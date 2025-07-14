@@ -1,7 +1,15 @@
-/* src/styles/global.css */
-.hero-banner-bg {
-  background-image: url('https://storage.googleapis.com/aurora-homepage-assets-prod1/Otimizadas%20Web/Puzzel_Aurora.png');
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+/* Caminho: src/styles/global.css */
+
+/* Animação que move a posição do fundo do gradiente */
+@keyframes aurora-wave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Classe de utilidade para o fundo animado */
+.aurora-background {
+  background: linear-gradient(-45deg, #a8d8ea, #fdf6ec, #c7e9c0, #a8d8ea);
+  background-size: 400% 400%;
+  animation: aurora-wave 20s ease infinite;
 }

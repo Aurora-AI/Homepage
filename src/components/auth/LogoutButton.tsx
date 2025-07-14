@@ -1,10 +1,6 @@
-import { useState } from 'react';
-
 export default function LogoutButton() {
   const handleLogout = () => {
-    // Apaga o cookie de autenticação definindo uma data de expiração no passado.
     document.cookie = 'auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT;';
-    // Redireciona para a página de login.
     window.location.href = '/login';
   };
 
