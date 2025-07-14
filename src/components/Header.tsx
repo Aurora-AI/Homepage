@@ -37,6 +37,14 @@ const Header = () => {
                     </a>
                   </li>
                 ))}
+                <li>
+                  <a 
+                    href="/login" 
+                    className="bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-2 px-4 rounded-md transition-colors duration-300"
+                  >
+                    Acesso ao Painel
+                  </a>
+                </li>
               </ul>
             </nav>
           </div>
