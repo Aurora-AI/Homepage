@@ -49,6 +49,7 @@ Copie `.env.example` para `.env` e ajuste `PUBLIC_ASSETS_BASE` caso deseje alter
 src/
 ├── components/          # Componentes React
 │   ├── ui/             # Componentes UI reutilizáveis
+│   │   └── AnimatedCard.astro # Card com borda animada
 │   ├── Hero.tsx        # Seção hero
 │   ├── Tese.tsx        # Seção da tese
 │   └── ...

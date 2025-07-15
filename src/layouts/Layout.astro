@@ -1,50 +1,53 @@
 ---
-// src/layouts/Layout.astro
 import Header from '../components/Header.tsx';
 import Footer from '../components/Footer.tsx';
 import 'reactflow/dist/style.css';
+
 interface Props {
-	title: string;
+  title: string;
 }
+
 const { title } = Astro.props;
-import '../styles/global.css';
 ---
-<!doctype html>
-<html lang="pt-br" class="scroll-smooth bg-aurora-bg">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Aurora: Construindo o Próximo Paradigma de Software." />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-	</head>
-	<body class="font-sans text-white/90 antialiased">
     
-    {/* Vídeo de Fundo Atualizado */}
-    <div class="fixed inset-0 z-[-1] overflow-hidden">
-      <video
-        class="absolute top-1/2 left-1/2 min-w-full min-h-full w-auto h-auto object-cover -translate-x-1/2 -translate-y-1/2"
-        autoplay
-        loop
-        muted
-        playsinline
-      >
-        {/* CORREÇÃO: URL alterada para Fundo Site 2 */}
-        <source src="https://i5dvyyer3ittq48j.public.blob.vercel-storage.com/Fundo%20Site%202-lw8quDzq6b6Nypufhs8O0BklLFzZuK.mp4" type="video/mp4" />
-      </video>
-      <div class="absolute inset-0 bg-black/60"></div>
+    <style>
+      body {
+        background-color: #0a0f2c;
+      }
+    </style>
+  </head>
+  <body class="font-sans text-white/90">
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+      class="fixed top-0 left-0 w-full h-full object-cover -z-10"
+    >
+      <source src="https://i5dvyyer3ittq48j.public.blob.vercel-storage.com/Background/Background%20black.mp4" type="video/mp4" />
+    </video>
+
+    <div class="fixed top-0 left-0 w-full h-full bg-black/50 -z-10"></div>
+
+    <div class="relative z-0">
+      <Header client:load />
+      <main>
+        <slot />
+      </main>
+      <Footer client:visible />
     </div>
-
-    <Header client:load />
-    <main>
-      <slot />
-    </main>
-    <Footer client:visible />
-
-	</body>
+  </body>
 </html>
