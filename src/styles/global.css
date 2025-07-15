@@ -1,5 +1,3 @@
-/* Caminho: src/styles/global.css */
-
 /* Animação que move a posição do fundo do gradiente */
 @keyframes aurora-wave {
   0% { background-position: 0% 50%; }
@@ -7,7 +5,7 @@
   100% { background-position: 0% 50%; }
 }
 
-/* Classe de utilidade para o fundo animado */
+/* Classe de utilidade que aplica o fundo animado */
 .aurora-background {
   background: linear-gradient(-45deg, #a8d8ea, #fdf6ec, #c7e9c0, #a8d8ea);
   background-size: 400% 400%;
