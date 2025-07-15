@@ -1,22 +1,33 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import LogoutButton from '../components/auth/LogoutButton.tsx';
+// Caminho: src/pages/dashboard.astro
+
+import DashboardLayout from '../layouts/DashboardLayout.astro';
+import Sidebar from '../components/dashboard/Sidebar.tsx';
+import Header from '../components/dashboard/Header.tsx';
+import PerformanceWidget from '../components/dashboard/PerformanceWidget.tsx';
+import TrainingWidget from '../components/dashboard/TrainingWidget.tsx';
 import TasksWidget from '../components/dashboard/TasksWidget.tsx';
 ---
-<Layout title="Aurora - Painel">
-  <main class="container mx-auto p-8 text-white">
-    <div class="flex justify-between items-center mb-8">
-      <h1 class="text-4xl font-bold">Painel Seguro</h1>
-      <LogoutButton client:load />
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <TasksWidget client:visible />
-      <div class="p-8 text-center border-2 border-dashed border-white/20 rounded-lg">
-        <p class="text-white/70">Widget em desenvolvimento</p>
+<DashboardLayout title="Aurora - Painel de Controle">
+  
+  {/* Componente da Barra Lateral */}
+  <Sidebar client:idle />
+
+  {/* Contêiner Principal para o conteúdo do dashboard */}
+  <main class="flex-1 p-6 lg:p-8 overflow-y-auto">
+    <div class="container mx-auto max-w-7xl">
+      
+      {/* Cabeçalho específico do Dashboard */}
+      <Header client:idle />
+
+      {/* Grid para os Widgets */}
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <PerformanceWidget client:visible />
+        <TrainingWidget client:visible />
+        <TasksWidget client:visible />
       </div>
-      <div class="p-8 text-center border-2 border-dashed border-white/20 rounded-lg">
-        <p class="text-white/70">Widget em desenvolvimento</p>
-      </div>
+
     </div>
   </main>
-</Layout>
+
+</DashboardLayout>
