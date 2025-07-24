@@ -1,0 +1,10 @@
+---
+// src/pages/app.astro
+// Página Astro que renderiza a aplicação React Router
+import Layout from '../layouts/Layout.astro';
+import App from '../App.tsx';
+---
+
+<Layout title="Aurora - Aplicação">
+  <App client:load />
+</Layout>
