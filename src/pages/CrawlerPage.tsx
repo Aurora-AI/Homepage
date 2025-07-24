@@ -11,8 +11,8 @@ export default function CrawlerPage() {
   const handleLogout = () => {
     // Remove token do localStorage
     localStorage.removeItem('aurora_token');
-    // Redireciona para login
-    navigate('/login');
+    // Redireciona para login correto
+    navigate('/app/login');
   };
 
   return (

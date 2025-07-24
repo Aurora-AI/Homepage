@@ -14,13 +14,13 @@ export default function HomePage() {
         </p>
         <div className="mt-8 space-x-4">
           <a 
-            href="/login" 
+            href="/app/login" 
             className="bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-2 px-4 rounded-md transition-all duration-300"
           >
             Ir para Login
           </a>
           <a 
-            href="/manifesto" 
+            href="/app/manifesto" 
             className="bg-cyan-700 hover:bg-cyan-800 text-white font-bold py-2 px-4 rounded-md transition-all duration-300"
           >
             Manifesto Aurora
