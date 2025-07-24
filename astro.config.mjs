@@ -6,8 +6,8 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   // Define o diretório público para assets estáticos
   publicDir: './public',
-  // Modo de saída estático para o deploy
-  output: 'static',
+  // Modo de saída SSR/híbrido para rotas dinâmicas React Router
+  output: 'server', // Alternativamente: 'hybrid'
   integrations: [react(), tailwind({
     // Permite que o Tailwind escaneie arquivos Astro e React
     applyBaseStyles: true // Aplica os estilos base do Tailwind
