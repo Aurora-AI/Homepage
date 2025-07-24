@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
+import vercel from "@astrojs/vercel/server"; // <-- ADICIONADO
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,6 +13,7 @@ export default defineConfig({
     // Permite que o Tailwind escaneie arquivos Astro e React
     applyBaseStyles: true // Aplica os estilos base do Tailwind
   })],
+  adapter: vercel(), // <-- ADICIONADO
   vite: {
     // Configurações do Vite, se necessário (ex: para alias de importação)
     ssr: {
