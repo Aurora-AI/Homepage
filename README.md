@@ -4,11 +4,14 @@ Uma homepage moderna e elegante construída com tecnologias de ponta para aprese
 
 ## 🚀 Stack Tecnológica
 
-- **Astro** - Framework web moderno para sites rápidos
-- **React** - Biblioteca para componentes interativos
-- **TypeScript** - Tipagem estática para JavaScript
-- **Tailwind CSS** - Framework CSS utilitário
-- **Framer Motion** - Biblioteca de animações
+
+## 🌐 Rotas Principais
+
+- `/` — Página inicial pública (HomePage)
+- `/login` — Página de autenticação
+- `/manifesto` — Manifesto Aurora (missão e visão do projeto)
+- `/app/crawler` — Área protegida (requer token no localStorage)
+
 
 ## 🛠️ Setup Local
 

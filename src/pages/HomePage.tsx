@@ -20,6 +20,12 @@ export default function HomePage() {
             Ir para Login
           </a>
           <a 
+            href="/manifesto" 
+            className="bg-cyan-700 hover:bg-cyan-800 text-white font-bold py-2 px-4 rounded-md transition-all duration-300"
+          >
+            Manifesto Aurora
+          </a>
+          <a 
             href="/app/crawler" 
             className="bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-md transition-all duration-300"
           >

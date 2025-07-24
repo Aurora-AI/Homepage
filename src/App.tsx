@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import CrawlerPage from './pages/CrawlerPage';
+import ManifestoPage from './pages/ManifestoPage';
 import ProtectedRoute from './components/ProtectedRoute';
 
 /**
@@ -18,7 +19,8 @@ export default function App() {
         {/* Rotas Públicas */}
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
-        
+        <Route path="/manifesto" element={<ManifestoPage />} />
+
         {/* Rotas Protegidas */}
         <Route 
           path="/app/crawler" 
