@@ -1,22 +1,30 @@
----
-title: "Header"
----
+import LanguageSwitcher from './LanguageSwitcher.astro';
+import { detectLocaleFromPath, type Locale, withLocaleHref } from '../utils/locale';
 
-<nav>
-  <ul class="flex items-center space-x-6 text-white">
-    {/* ... links existentes ... */}
-    {/* Exemplo de links, ajuste conforme necessário */}
-    <li><a href="/tese" class="hover:text-cyan-400">Tese</a></li>
-    <li><a href="/arquitetura" class="hover:text-cyan-400">Arquitetura</a></li>
-    {/* ... mais links ... */}
-    <li><a href="/soberania" class="hover:text-cyan-400">Soberania</a></li>
-    <li>
-      <a 
-        href="/login" 
-        class="bg-cyan-500 hover:bg-cyan-600 text-black font-bold py-2 px-4 rounded-md transition-colors duration-300"
-      >
-        Acesso ao Painel
+const locale: Locale = detectLocaleFromPath(Astro.url.pathname);
+
+const labels = {
+  pt: { produtos: 'Produtos', time: 'Time', screenshots: 'Screenshots', status: 'Status', contato: 'Contato', acesso: 'Acessar Aurora' },
+  en: { produtos: 'Products', time: 'Team', screenshots: 'Screenshots', status: 'Status', contato: 'Contact', acesso: 'Access Aurora' },
+  es: { produtos: 'Productos', time: 'Equipo', screenshots: 'Capturas', status: 'Estado', contato: 'Contacto', acesso: 'Acceder a Aurora' },
+}[locale];
+---
+<header class="w-full bg-white/80 backdrop-blur border-b sticky top-0 z-40">
+  <div class="container flex items-center justify-between h-16">
+    <a href={withLocaleHref(locale, '/')} class="font-display text-lg">Aurora</a>
+    <nav class="hidden md:flex gap-6 text-sm">
+      <a href={withLocaleHref(locale, '/produtos')} class="hover:opacity-80">{labels.produtos}</a>
+      <a href={withLocaleHref(locale, '/time')} class="hover:opacity-80">{labels.time}</a>
+      <a href={withLocaleHref(locale, '/screenshots')} class="hover:opacity-80">{labels.screenshots}</a>
+      <a href={withLocaleHref(locale, '/status')} class="hover:opacity-80">{labels.status}</a>
+      <a href={withLocaleHref(locale, '/contato')} class="hover:opacity-80">{labels.contato}</a>
+    </nav>
+    <div class="flex items-center gap-3">
+      <LanguageSwitcher />
+      <a href="https://app.auroracrm.com.br" class="px-3 py-2 rounded-lg text-white"
+         style="background:linear-gradient(135deg,var(--aurora-accent),var(--aurora-accent-2))">
+        {labels.acesso}
       </a>
-    </li>
-  </ul>
-</nav>
+    </div>
+  </div>
+</header>

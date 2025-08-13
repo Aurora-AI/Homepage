@@ -1,0 +1,25 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import heroImg from '../../assets/hero-holographic.png';
+---
+<Layout title="Aurora — AI Operating System for Business" description="Connect, learn and act proactively.">
+  <section class="relative bg-gradient-to-b from-white to-gray-50 py-20">
+    <div class="container mx-auto px-6 flex flex-col-reverse lg:flex-row items-center gap-12">
+      <div class="flex-1 text-center lg:text-left">
+        <h1 class="font-display text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+          What if your company could feel?
+        </h1>
+        <p class="text-lg text-gray-600 mb-8">
+          Aurora is the AI Operating System that connects, learns and acts proactively to transform your business.
+        </p>
+        <div class="flex gap-4 justify-center lg:justify-start">
+          <a href="/en/demo" class="px-6 py-3 bg-aurora-accent text-white rounded-xl shadow-soft hover:opacity-90 transition">Watch Demo</a>
+          <a href="/en/contato" class="px-6 py-3 border border-gray-300 rounded-xl hover:bg-gray-100 transition">Talk to Sales</a>
+        </div>
+      </div>
+      <div class="flex-1 relative">
+        <img src={heroImg} alt="Aurora holographic face" class="w-full max-w-lg mx-auto drop-shadow-2xl rounded-2xl" />
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -47,6 +47,7 @@ const { title } = Astro.props;
       <main>
         <slot />
       </main>
+      <AutoraWidget client:idle />
       <Footer client:visible />
     </div>
   </body>

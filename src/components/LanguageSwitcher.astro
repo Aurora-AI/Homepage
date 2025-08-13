@@ -1,0 +1,33 @@
+---
+import type { Locale } from '../utils/locale';
+import { detectLocaleFromPath } from '../utils/locale';
+
+const currentPath = Astro.url.pathname;          // ex: /, /en, /es, /en/produtos
+const currentLocale: Locale = detectLocaleFromPath(currentPath);
+
+const targets: { code: Locale; label: string }[] = [
+  { code: 'pt', label: 'Português' },
+  { code: 'en', label: 'English' },
+  { code: 'es', label: 'Español' },
+];
+
+function switchUrl(target: Locale) {
+  const segs = currentPath.split('/').filter(Boolean);
+  // remove prefixos en/es
+  if (segs[0] === 'en' || segs[0] === 'es') segs.shift();
+  const base = '/' + segs.join('/');
+  if (target === 'pt') return base === '/' ? '/' : base;
+  return `/${target}${base === '/' ? '' : base}`;
+}
+---
+<div class="relative">
+  <select
+    class="text-sm rounded-lg border px-2 py-1 bg-white/80"
+    onchange={`location.href=this.value`}
+    aria-label="Selecionar idioma"
+  >
+    {targets.map(t => (
+      <option value={switchUrl(t.code)} selected={t.code === currentLocale}>{t.label}</option>
+    ))}
+  </select>
+</div>
