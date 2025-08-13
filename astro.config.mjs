@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-import vercel from "@astrojs/vercel"; // Corrigido para Astro 5
+import vercel from "@astrojs/vercel/serverless"; // Adapter SSR Vercel
 
 // https://astro.build/config
 export default defineConfig({
